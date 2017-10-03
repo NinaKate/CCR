@@ -3,7 +3,7 @@
 CC=g++
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the           
 # options I'll pass to the compiler.                                           
-LIBS=-I$(/lib64) -L$(/lib64) -lblas
+LIBS=-I$(/lib64) -L$(/lib64) -libblas.so
 sof = /lib64/libblas.so
 head =  ./cblas.h
 vers = c++11

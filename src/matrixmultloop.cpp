@@ -36,7 +36,7 @@ int main(){
   double t = std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count();
   double flops = ops / (t*pow(10,-9)) *pow(10,-6);
   //cout<<bytes<<'\t'<<T <<'\t'<<CLOCKS_PER_SEC<<'\n'<<endl;
-  cout<<bytes<<'\t'<<flops<<'\t'<<std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count()<<"ns"<<'\n';
+  cout<<bytes<<'\t'<<flops<<'\n';
   for (size_t i = n-1; i>0;--i){
     delete[] C[i];
     delete[] B[i];
