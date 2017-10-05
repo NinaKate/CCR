@@ -1,20 +1,19 @@
 # I am a comment, and I want to say that the variable CC will be 
 # the compiler to use.                                                         
-CC=g++ -O0
+CC=icpc -std=c++11 -mkl
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the           
 # options I'll pass to the compiler.                                           
-LIBS=-I$(/lib64) -L$(/lib64) -lblas
-sof = /lib64/libblas.so
-head =  ./cblas.h
-vers = c++11
+LIBS=-I$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) -L$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) 
 #This is me saying I want the version of std used to be c++11
-all: vdprunnet  $(sof)  
+all: vdpmkl mmlmkl
 
-vdprunnet: vdprunnet.o $(sof) 
-	$(CC) -std=$(vers) $^ $(LIBS) -o vdprunnet
+vdpmkl: vdpmkl.o  
+	$(CC) $^ $(LIBS) -o vdpmkl
 
-vdprunnet.o: vdprunnet.cpp cblas.h
-	$(CC) -std=$(vers) -c vdprunnet.cpp
+vdpmkl.o: vdpmkl.cpp
+	$(CC) -c vdpmkl.cpp
 
+mmlmkl: mmlmkl.cpp
+	$(CC) $^ -o mmlmkl
 clean:
-	rm -rf *o vdprunnet
+	rm -rf *o vdpmkl mmlmkl
