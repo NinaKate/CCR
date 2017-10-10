@@ -1,0 +1,8 @@
+#!
+module load gcc/7.2.0
+
+g++ -O0 matrixadd.cpp -o mmag0
+echo The output for gcc, no optimization is:
+./mmag0
+20000
+

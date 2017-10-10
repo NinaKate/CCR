@@ -15,7 +15,11 @@ int main(){
     B[i] = new short[n];
     C[i] = new short[n];
   }
-
+  for (size_t i=0;i<n;i++){
+    for (size_t j=0;j<n;j++){
+      A[i][j]=1;
+      B[i][j]=1;
+      C[i][j]=0;}}
   //first the row then column implementation
   clock_t t;
   t = clock();
