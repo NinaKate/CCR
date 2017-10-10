@@ -11,13 +11,15 @@ using namespace std;
 int main(){
   unsigned int n;
   const int inc = 1;
-  for (int i=0;i<29;i++){
+  for (int i=0;i<25;i++){
     n=(pow(2.0,i));
     const int m = n;
     double *A = new double[n];
   double *B = new double[n];
   double C = 0;
-  
+  for (int k=0;k<n;k++){
+    A[k]=1.0;
+    B[k]=1.0;}  
   auto begin = std::chrono::high_resolution_clock::now();
   for (int j =0;j<100;j++){
     C = ddot_(&m,A,&inc,B,&inc);}
@@ -28,6 +30,8 @@ int main(){
   double flops = 2*n/t;
   flops = flops*pow(10,-6);
   cout<<N<<'\t'<<flops<<'\n'<<endl;
+  if (C==n){}
+  else{cout<<"SOMETHING WENT WRONG"<<endl;}
   delete[] A;
   delete[] B;
 

@@ -1,20 +1,20 @@
 # I am a comment, and I want to say that the variable CC will be 
 # the compiler to use.                                                         
-CC=g++ -O0
+CC=g++ -std=c++11
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the           
 # options I'll pass to the compiler.                                           
 LIBS=-I$(/lib64) -L$(/lib64) -lblas
 sof = /lib64/libblas.so
 head =  ./cblas.h
-vers = c++11
+
 #This is me saying I want the version of std used to be c++11
 all: vdprunnet  $(sof)  
 
 vdprunnet: vdprunnet.o $(sof) 
-	$(CC) -std=$(vers) $^ $(LIBS) -o vdprunnet
+	$(CC) $^ $(LIBS) -o vdprunnet
 
 vdprunnet.o: vdprunnet.cpp cblas.h
-	$(CC) -std=$(vers) -c vdprunnet.cpp
+	$(CC) -c vdprunnet.cpp
 
 clean:
 	rm -rf *o vdprunnet

@@ -16,7 +16,9 @@ int main(){
     double *A = new double[n];
   double *B = new double[n];
   double C = 0;
-  
+  for (int k=0;k<n;k++){
+    A[k]=1.0;
+    B[k]=1.0;}  
   auto begin = std::chrono::high_resolution_clock::now();
   for (int j =0;j<100;j++){
     C = cblas_ddot(n,A,1,B,1);}
