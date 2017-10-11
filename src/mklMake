@@ -5,15 +5,26 @@ CC=icpc -std=c++11 -mkl
 # options I'll pass to the compiler.                                           
 LIBS=-I$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) -L$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) 
 #This is me saying I want the version of std used to be c++11
-all: vdpmkl mmlmkl
+all: vdpmkl3 vdpmkld mmlmkl3 mmlmkld mmlmkl0 vdpmkl0
 
-vdpmkl: vdpmkl.o  
-	$(CC) $^ $(LIBS) -o vdpmkl
+vdpmkld: vdpmkl.o  
+	$(CC) $^ $(LIBS) -o vdpmkld
+
+vdpmkl0: vdpmkl.o
+	 $(CC) -O0 $^ $(LIBS) -o vdpmkl0
+ 
+vdpmkl3:vdpmkl.o
+	$(CC) -O3 $^(LIBS) -o vdpmkl3
 
 vdpmkl.o: vdpmkl.cpp
 	$(CC) -c vdpmkl.cpp
 
-mmlmkl: mmlmkl.cpp
-	$(CC) $^ -o mmlmkl
+mmlmkld: mmlmkl.cpp
+	$(CC) $^ -o mmlmkld
+mmlmkl0: mmlmkl.cpp
+	 $(CC) -O0 $^ -o mmlmkl0
+
+mmlmkl3: mmlmkl.cpp
+	 $(CC) -O3 $^ -o mmlmkl3
 clean:
 	rm -rf *o vdpmkl mmlmkl

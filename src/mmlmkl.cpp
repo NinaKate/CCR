@@ -25,7 +25,7 @@ int main(){
   //clock_t t;
   //t = clock();
   auto begin = std::chrono::high_resolution_clock::now();
-  cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,n, n, n, 1, A, n, B, n, 0, C, n);;
+  cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,n, n, n, alpha, A, n, B, n, beta, C, n);
   auto end = std::chrono::high_resolution_clock::now();
   
   //t = clock()-t;
@@ -33,11 +33,11 @@ int main(){
   double bytes = pow(n,2)*8;
   double ops = 2*pow(n,3);
   double t = std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count();
-  double flops = ops / (t*pow(10,-9)) *pow(10,-6);
+  double flops = ops / (t*pow(10.,-9.)) *pow(10.,-6.);
   //cout<<bytes<<'\t'<<T <<'\t'<<CLOCKS_PER_SEC<<'\n'<<endl;
   cout<<bytes<<'\t'<<flops<<'\n';
   for (int l=0;l<m;l++){
-    A[l]=C[l];}
+    if(C[l]!=n){cout<<"WE HAVE A PROBLEM"<<endl;}}
   delete[] C;
   delete[] B;
   delete[] A;

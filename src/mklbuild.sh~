@@ -1,0 +1,3 @@
+#!
+module load mkl
+source $MKL/bin/
