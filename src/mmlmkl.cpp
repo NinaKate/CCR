@@ -17,7 +17,10 @@ int main(){
   double *A = new double[m];
   double *B = new double[m];
   double *C = new double[m];
-    
+  for (int l=0;l<m;l++){
+    A[l]=1.0;
+    B[l]=1.0;
+    C[l]=0.0;}    
  
   //clock_t t;
   //t = clock();
@@ -33,6 +36,8 @@ int main(){
   double flops = ops / (t*pow(10,-9)) *pow(10,-6);
   //cout<<bytes<<'\t'<<T <<'\t'<<CLOCKS_PER_SEC<<'\n'<<endl;
   cout<<bytes<<'\t'<<flops<<'\n';
+  for (int l=0;l<m;l++){
+    A[l]=C[l];}
   delete[] C;
   delete[] B;
   delete[] A;
