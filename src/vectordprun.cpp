@@ -6,7 +6,7 @@
 using namespace std;
 int main(){
   unsigned int n;
-  for (int i=0;i<28;i++){
+  for (int i=0;i<23;i++){
     n=(pow(2.0,i));
   double *A = new double[n];
   double *B = new double[n];

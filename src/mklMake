@@ -11,10 +11,10 @@ vdpmkld: vdpmkl.o
 	$(CC) $^ $(LIBS) -o vdpmkld
 
 vdpmkl0: vdpmkl.o
-	 $(CC) -O0 $^ $(LIBS) -o vdpmkl0
+	$(CC) -O0 $^ $(LIBS) -o vdpmkl0
  
 vdpmkl3:vdpmkl.o
-	$(CC) -O3 $^(LIBS) -o vdpmkl3
+	$(CC) -O3 $^ $(LIBS) -o vdpmkl3
 
 vdpmkl.o: vdpmkl.cpp
 	$(CC) -c vdpmkl.cpp
@@ -22,9 +22,9 @@ vdpmkl.o: vdpmkl.cpp
 mmlmkld: mmlmkl.cpp
 	$(CC) $^ -o mmlmkld
 mmlmkl0: mmlmkl.cpp
-	 $(CC) -O0 $^ -o mmlmkl0
+	$(CC) -O0 $^ -o mmlmkl0
 
 mmlmkl3: mmlmkl.cpp
-	 $(CC) -O3 $^ -o mmlmkl3
+	$(CC) -O3 $^ -o mmlmkl3
 clean:
 	rm -rf *o vdpmkl mmlmkl

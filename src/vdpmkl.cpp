@@ -10,7 +10,7 @@ using namespace std;
 int main(){
   unsigned int n;
   const int inc = 1;
-  for (int i=0;i<29;i++){
+  for (int i=0;i<23;i++){
     n=(pow(2.0,i));
     const int m = n;
     double *A = new double[n];
@@ -29,6 +29,7 @@ int main(){
   double flops = 2*n/t;
   flops = flops*pow(10,-6);
   cout<<N<<'\t'<<flops<<'\n'<<endl;
+  if (C == 0){cout<<"catastrophic erroR"<<endl;}
   delete[] A;
   delete[] B;
 

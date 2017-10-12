@@ -11,7 +11,7 @@ using namespace std;
 int main(){
   unsigned int n;
   const int inc = 1;
-  for (int i=0;i<25;i++){
+  for (int i=0;i<23;i++){
     n=(pow(2.0,i));
     const int m = n;
     double *A = new double[n];
