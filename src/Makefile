@@ -8,7 +8,7 @@ sof = /lib64/libblas.so
 head =  ./cblas.h
 
 #This is me saying I want the version of std used to be c++11
-all: vdprunnet  vdprunnet.o  vectordprun 
+all: vdprunnet  vdprunnet.o  vdpr0 vdpr3  
 
 vdprunnet: vdprunnet.o $(sof) 
 	$(CC) $^ $(LIBS) -o vdprunnet
@@ -16,7 +16,10 @@ vdprunnet: vdprunnet.o $(sof)
 vdprunnet.o: vdprunnet.cpp cblas.h
 	$(CC) -c vdprunnet.cpp
 
-vectordprun: vectordprun.cpp
-	$(CC) $^ -o vdprun
+vdpr0: vectordprun.cpp
+	$(CC) -O0 $^ -o vdpr0
+
+vdpr3: vectordprun.cpp
+	$(CC) -O3 $^ -o vdpr3
 clean:
 	rm -rf *o vdprunnet
