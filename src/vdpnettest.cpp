@@ -3,10 +3,10 @@
 #include <time.h>
 #include <math.h>
 #include <chrono>
-//#include <cblas.h>
+#include <cblas.h>
 
-extern "C" {
-  double ddot_(const int *N, const double *a, const int *inca, const double *b, const int *incb);}
+//extern "C" {
+//  double ddot_(const int *N, const double *a, const int *inca, const double *b, const int *incb);}
 using namespace std;
 int main(){
   unsigned int n;
@@ -22,7 +22,7 @@ int main(){
     B[k]=1.0;}  
   auto begin = std::chrono::high_resolution_clock::now();
   for (int j =0;j<100;j++){
-    C = ddot_(&m,A,&inc,B,&inc);}
+    C = ddot(&m,A,&inc,B,&inc);}
   auto end = std::chrono::high_resolution_clock::now();
   double t = std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count();
   t = t*pow(10,-9)/100;

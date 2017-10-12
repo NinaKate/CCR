@@ -1,6 +1,6 @@
 # I am a comment, and I want to say that the variable CC will be 
 # the compiler to use.                                                         
-CC=icpc -std=c++11 -mkl
+CC=icpc -std=c++11 -mkl -Wall
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the           
 # options I'll pass to the compiler.                                           
 LIBS=-I$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) -L$(/util/academic/intel/17.0/compilers_and_libraries_2017/linux/mkl) 
@@ -20,11 +20,13 @@ vdpmkl.o: vdpmkl.cpp
 	$(CC) -c vdpmkl.cpp
 
 mmlmkld: mmlmkl.cpp
-	$(CC) $^ -o mmlmkld
+	$(CC) $^ $(LIBS) -o mmlmkld
+
 mmlmkl0: mmlmkl.cpp
-	$(CC) -O0 $^ -o mmlmkl0
+	$(CC) -O0 $^ $(LIBS) -o mmlmkl0
 
 mmlmkl3: mmlmkl.cpp
-	$(CC) -O3 $^ -o mmlmkl3
+	$(CC) -O3 $^ $(LIBS) -o mmlmkl3
+
 clean:
 	rm -rf *o vdpmkl mmlmkl
