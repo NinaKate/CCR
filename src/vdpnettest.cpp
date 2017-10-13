@@ -22,7 +22,7 @@ int main(){
     B[k]=1.0;}  
   auto begin = std::chrono::high_resolution_clock::now();
   for (int j =0;j<100;j++){
-    C = ddot(&m,A,&inc,B,&inc);}
+    C = cblas_ddot(m,A,inc,B,inc);}
   auto end = std::chrono::high_resolution_clock::now();
   double t = std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count();
   t = t*pow(10,-9)/100;

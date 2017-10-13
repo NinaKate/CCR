@@ -20,18 +20,19 @@ int main(){
     A[k]=1.0;
     B[k]=1.0;}  
   auto begin = std::chrono::high_resolution_clock::now();
-  for (int j =0;j<100;j++){
-    C = cblas_ddot(n,A,1,B,1);}
+  //for (int j =0;j<100;j++){
+  C = cblas_ddot(n,A,1,B,1);//}
   auto end = std::chrono::high_resolution_clock::now();
   double t = std::chrono::duration_cast<std::chrono::nanoseconds>(end-begin).count();
-  t = t*pow(10,-9)/100;
+  t = t*pow(10,-9);///100;
   double N = 8*n;
   double flops = 2*n/t;
   flops = flops*pow(10,-6);
   cout<<N<<'\t'<<flops<<'\n'<<endl;
-  if (C == 0){cout<<"catastrophic erroR"<<endl;}
+  if (C != n){cout<<"catastrophic erroR; C is "<< C <<" not "<<n<<endl;}
   delete[] A;
   delete[] B;
+  C = 0;
 
   }
  return 0;

@@ -11,9 +11,9 @@ head =  ./cblas.h
 all: mml0 mml3
 
 mml0: matrixmultloop.cpp
-	$(CC) -O0 $^ -o mml0
+	$(CC) -O0 $^ -o mml0.o
 
 mml3: matrixmultloop.cpp
-	$(CC) -O3 $^ -o mml3
+	$(CC) -O3 $^ -o mml3.o
 clean:
 	rm -rf *o matrixmultloop

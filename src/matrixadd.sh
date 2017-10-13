@@ -20,4 +20,4 @@ icpc -O3 matrixadd.cpp -o mmai3
 echo the intel max optimization result is
 ./mmai3
 
-
+rm mmai3 mmai0 mmag3 mmag0
