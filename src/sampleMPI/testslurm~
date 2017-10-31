@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --partition=debug
+#SBATCH --job-name="hellompi"
+#SBATCH --output=hellompi-%j.out
+#SBATCH --error=hellompi-%j.err
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=12
+##SBATCH --mem=4800
+#SBATCH --time=00:05:00 ##Note to self to remember, this is hours:min:sec
+#SBATCH --constraint=IB&CPU-E5645
+#SBATCH --mail-user=ninastei@buffalo.edu
+#SBATCH --mail-type=ALL
+#SBATCH --requeue
+
+module purge
+module load intel/17.0
+module load intel-mpi/2017.0.1
+module list
+
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+srun ./helloworld.mpi
+
+echo "AND LO!"

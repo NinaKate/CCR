@@ -1,0 +1,31 @@
+SLURM_JOB_ID=7596981
+SLURM_JOB_NODELIST=cpn-k08-40-[01-02]
+SLURM_NNODES=2
+SLURMTMPDIR=/scratch/7596981
+working directory = /user/ninastei/CCR/src/sampleMPI
+**************
+Hello, world, my name is Alice! Parallel is fun. Something process 13 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 1 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 3 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 4 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 5 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 0 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 6 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 7 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 8 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 9 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 11 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 2 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 10 of 24 on cpn-k08-40-01.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 15 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 16 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 18 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 19 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 20 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 21 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 22 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 23 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 12 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 14 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+Hello, world, my name is Alice! Parallel is fun. Something process 17 of 24 on cpn-k08-40-02.cbls.ccr.buffalo.edu 
+AND LO!
