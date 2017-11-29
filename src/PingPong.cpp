@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <mpi.h>
 #include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <vector>
 void errchk(int errcode,char* functname){
   if (errcode!=MPI_SUCCESS){
     int errclass;
@@ -49,16 +52,19 @@ void errchk(int errcode,char* functname){
     else{
       printf("Something has gone wrong in a way unanticipated by this list of error classes in fun\
 ction call %s. Sorry.",functname);}
-  }}
+  }
+  //else{printf("Successfully accomplished %s",functname);}
+}
 
 int main(int argc,char*argv[]){
-  int rank,size,ierr,max_volleys;
-  double ball;
+  int rank,size,ierr,target,max_volleys;
+  long messagelength;
+  double t_start,t_stop;
   char*func;
+  //   std::vector<double>ball;
   MPI_Status status;
   MPI_Comm Comm =MPI_COMM_WORLD;
-  double t_start,t_stop;
-  MPI_Init(&argc,&argv);
+  MPI_Init(NULL,NULL);
   MPI_Comm_set_errhandler(Comm,MPI_ERRORS_RETURN);
   ierr=MPI_Comm_size(Comm,&size);
   func="MPI_Comm_size";
@@ -66,42 +72,39 @@ int main(int argc,char*argv[]){
   ierr=MPI_Comm_rank(Comm,&rank);
   func="MPI_Comm_rank";
   errchk(ierr,func);
-  int volleys=0;
-  int maxvolley=100;
-  if (rank==0)
-    ball = 42.0;
+  //  printf("this is processor %d of %d, reporting for duty!",rank,size);
+  //for (int j=0;j<7;j++){
+  //messagelength=pow(10,j);
+  messagelength = 1;
+  // ball.resize(messagelength);
+   double *ball=new double[messagelength];
+  for (int i=0;i<messagelength;i++){
+    ball[i]=0.0;}
+  max_volleys=10;
+  target = (rank+1)%2;
   t_start = MPI_Wtime();
-  while(volleys<maxvolley){
-  if (rank==0){
-    ierr=MPI_Send(&ball,1,MPI_DOUBLE,1,9,Comm);
-    func="MPI_Send to 1 from 0 \n";
-    errchk(ierr,func);
-  }
-  
-  if (rank==1){
-    ierr=MPI_Recv(&ball,1,MPI_DOUBLE,0,9,Comm,&status);
-    func="MPI_Recv by 1 from 0 \n";
-    errchk(ierr,func);
-    std::cout<<"Proc 1 Ball get! Ball value is "<<ball<<"!"<<std::endl;
-    ball=ball+1.0;
-    ierr=MPI_Send(&ball,1,MPI_DOUBLE,0,9,Comm);
-    func="MPI_Send to 0 from 1\n";
-    errchk(ierr,func);
-    std::cout<<"Ball Passed on! Ball value is "<<ball<<"!"<<std::endl;
+  int volleys=0;
+  while(volleys<=max_volleys){
+    if(rank ==volleys % 2){
+      volleys++;
+      ball[0]=double(volleys);
+      ierr=MPI_Send(&ball,messagelength,MPI_DOUBLE,target,0,Comm);
+      func="MPI_Send\n";
+      errchk(ierr,func);
+      printf("%d sent the ball, volley count %d,to %d \n",rank,volleys,target);
+}else{
+      ierr=MPI_Recv(&ball,messagelength,MPI_DOUBLE,target,0,Comm,MPI_STATUS_IGNORE);
+      func="MPI_Recv\n";
+      errchk(ierr,func);
+      volleys = int(ball[0]);
+      printf("%d received the ball, volley count %d, from %d \n",rank,volleys,target);
     }
-  
-  if (rank==0){
-    ierr=MPI_Recv(&ball,1,MPI_DOUBLE,1,9,Comm,&status);
-    func="MPI_Recv by 1 from 0\n";
-    errchk(ierr,func);
-    std::cout<<"Proc 0 Ball get! Ball value is "<<ball<<" !"<<std::endl;
-    ball=ball+1;
   }
-  volleys+=1;
- }
   t_stop=MPI_Wtime();
-  if(rank==0)
-    std::cout<<"To you, from failing hands, we throw the ball. it took "<<(t_stop-t_start)/maxvolley<<" per volley."<<std::endl;
+  if(rank==0){std::cout<<"To you, from failing hands, we throw the ball. it took "<<(t_stop-t_start)/max_volleys<<" per volley, for a message of "<<8*messagelength<<" bytes."<<std::endl;}
+   delete[] ball;
+  //}
+
   ierr=MPI_Finalize();
 return 0;
 }

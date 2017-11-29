@@ -40,11 +40,11 @@ bool Mandelbrot(float ci,float cj, int N){
 }
 int main(){
   vector<vector<float> > plot;
-  for (int i=2;i<10;i++){
+  //  for (int i=2;i<10;i++){
     vector<float>point;
-    float h = pow(2,-i);
-    point.push_back(h);
-    //float h = 0.01;//spacing between grid points
+    // float h = pow(2,-i);
+    //    point.push_back(h);
+    float h = 0.005;//spacing between grid points
     float Nx = 4.0/h; //number of grid points per side in x
     float Ny = 2.0/h;
     float x=-2;
@@ -54,10 +54,10 @@ int main(){
     int numpts = 0;
     for (int i=0; i<Nx;i++){
       for (int j = 0;j<Ny;j++){
-	if (Mandelbrot(x,y,1000)==true){
+	if (Mandelbrot(x,y,10000)==true){
 	  real.push_back(x);
 	  imaginary.push_back(y);
-	  //                cout<<x<<","<<y<<endl;
+	  std::cout<<x<<'\t'<<y<<std::endl;
 	  numpts +=1;
 	}
 	y = -1 + h*j;
@@ -68,8 +68,8 @@ int main(){
     point.push_back(area);
     plot.push_back(point);
     //printf("The area of the mandelbrot set is %f according to this, for a grid size of %f. And yeah, I have no idea what the units should be here. ",area,h);
-    std::cout<<h<<'\t'<<area<<std::endl;
-  }
+    // std::cout<<h<<'\t'<<area<<std::endl;
+    // }
         
   return(0);
 }

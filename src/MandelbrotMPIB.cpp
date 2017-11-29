@@ -53,8 +53,8 @@ int main(int argc,char*argv[]){
   checkerr(ierr);
   float recsize = 4.0/size; //I am just doing vertical strips (it's simpler)
   //  if (rank==0){std::cout<<recsize<<std::endl;}
-   for (int i=4;i<10;i++){
-  float h = pow(2,-i);//spacing between grid points
+   
+  float h = 0.005;//spacing between grid points
     int Ntot = 4.0/h; //number of grid points across the x-axis
     int Nperproc=Ntot/size; //number of grid points per processor
     int Nleftover=size*(Ntot%size); //leftover grid points
@@ -73,7 +73,7 @@ int main(int argc,char*argv[]){
 	if (Mandelbrot(x,y,1000)==true){
 	  real.push_back(x);
 	  imaginary.push_back(y);
-	  //                cout<<x<<","<<y<<endl;
+	  std:: cout<<x<<"\t"<<y<<std::endl;
 	  numpts +=1;
 	}
 	y = -1 + h*j;
@@ -87,10 +87,8 @@ int main(int argc,char*argv[]){
     float area = 0;
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     checkerr(ierr);
-    if(rank==0){
-  
-      std::cout<<h<<'\t'<<area<<std::endl;
-    }}
+    //    if(rank==0){ std::cout<<h<<'\t'<<area<<std::endl; }
+
   MPI_Finalize();
   return(0);
 }
