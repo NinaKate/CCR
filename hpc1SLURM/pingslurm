@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --partition=debug
-#SBATCH --job-name="mpimand"
-#SBATCH --output=mpimand-%j.out
-#SBATCH --error=mpimand-%j.err
+#SBATCH --job-name="Pingpong"
+#SBATCH --output=Pingpong-%j.out
+#SBATCH --error=Pingpong-%j.err
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
-#SBATCH --time=00:15:00
+#SBATCH --time=00:05:00
 #SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
@@ -18,6 +18,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ~/CCR/execs/Mand.mpi
+srun ~/CCR/execs/ping.mpi
 
 echo "AND LO!"
