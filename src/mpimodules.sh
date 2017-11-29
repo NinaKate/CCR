@@ -1,8 +1,6 @@
 #!
 
-make -f mmlmake
 
-make -f mklMake
 
 ./mmlmkl0.o>mmlmkl0.data
 

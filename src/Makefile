@@ -4,7 +4,7 @@ CC=g++ -std=c++11
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the           
 # options I'll pass to the compiler.                                           
 LIBS=-I$(/lib64) -L$(/lib64) -lblas
-sof = /lib64/libblas.so
+sof = /lib64/libblas.so.3.4.2
 head =  ./cblas.h
 
 #This is me saying I want the version of std used to be c++11
@@ -27,7 +27,6 @@ vdprnt: vdpnettest.o $(sof)
 
 vdprnt.o: vdpnettest.cpp cblas.h
 	$(CC) -c vdpnettest.cpp
-
 
 clean:
 	rm -rf *o vdprunnet
