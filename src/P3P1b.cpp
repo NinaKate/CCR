@@ -44,7 +44,7 @@ int main(){
     vector<float>point;
     // float h = pow(2,-i);
     //    point.push_back(h);
-    float h = 0.005;//spacing between grid points
+    float h = 0.25;//spacing between grid points
     float Nx = 4.0/h; //number of grid points per side in x
     float Ny = 2.0/h;
     float x=-2;
