@@ -51,42 +51,40 @@ int main(int argc,char*argv[]){
   checkerr(ierr);
   ierr=MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   checkerr(ierr);
-  float recsize = 4.0/size; //I am just doing vertical strips (it's simpler)
+ 
   //  if (rank==0){std::cout<<recsize<<std::endl;}
-   
-  float h = 0.005;//spacing between grid points
+   for (int i=4;i<24;i++){
+     float h = 0.01;
+     float recsize = 4.0/i; //I am just doing vertical strips (it's simpler)  
     float N = recsize/h; //number of grid points per strip, across the x axis
     float Ny = 2.0/h;
+    int numpts = 0;
+    if (rank<i){
     float x=-2+rank*recsize;
     float y=-1;
     vector<float>real;
     vector<float>imaginary;
-    int numpts = 0;
-    for (int i=0; i<N+1;i++){
-      for (int j = 0;j<Ny+1;j++){
+   
+    for (int i=0; i<N;i++){
+      for (int j = 0;j<Ny;j++){
 	if (Mandelbrot(x,y,1000)==true){
 	  real.push_back(x);
 	  imaginary.push_back(y);
-	  std::cout<<x<<","<<y<<std::endl;
+	  //                cout<<x<<","<<y<<endl;
 	  numpts +=1;
 	}
 	y = -1 + h*j;
       }
       x = -2 + rank*recsize + h*i;
-    }
-    //int maxpts = 3333;
-    //printf("Alright, so processor %d of %d has found %d points, of a maximum of %d \n",rank,size,numpts,maxpts);
-    // long ptstotal;
+    }}
     float myarea = numpts*h*h;
     float area = 0;
-    // int *num_pts=NULL;
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     checkerr(ierr);
     if(rank==0){
   
-      //  std::cout<<h<<'\t'<<area<<std::endl;
-    }
-    
+      std::cout<<h<<'\t'<<area<<std::endl;
+    }}
   MPI_Finalize();
   return(0);
 }

@@ -53,7 +53,7 @@ int main(int argc,char*argv[]){
   checkerr(ierr);
   float recsize = 4.0/size; //I am just doing vertical strips (it's simpler)
   //  if (rank==0){std::cout<<recsize<<std::endl;}
-   for (int i=4;i<12;i++){
+   for (int i=4;i<10;i++){
   float h = pow(2,-i);//spacing between grid points
     float N = recsize/h; //number of grid points per strip, across the x axis
     float Ny = 2.0/h;
