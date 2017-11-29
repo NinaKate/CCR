@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=debug
-#SBATCH --job-name="P3P2bcoarse"
-#SBATCH --output=P3P2bcoarse-%j.out
-#SBATCH --error=P3P2bcoarse-%j.err
+#SBATCH --job-name="Mandrr1"
+#SBATCH --output=Mandrr1-%j.out
+#SBATCH --error=Mandrr1-%j.err
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
@@ -18,6 +18,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ~/CCR/execs/P3P2b.mpi
+srun ~/CCR/execs/MandRR.mpi
 
 #echo "AND LO!"
