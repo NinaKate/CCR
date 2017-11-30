@@ -4,7 +4,3 @@
 Currently Loaded Modules:
   1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
 
-slurmstepd: error: execve(): ~../exec/P2.mpi: No such file or directory
-slurmstepd: error: execve(): ~../exec/P2.mpi: No such file or directory
-srun: error: cpn-k08-40-01: tasks 0-1: Exited with exit code 2
-srun: Terminating job step 7785871.0

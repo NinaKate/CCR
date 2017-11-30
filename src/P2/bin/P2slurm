@@ -18,6 +18,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ../exec/P2.mpi
+srun ../exec/P2.mpi>P2a.txt
 
 
