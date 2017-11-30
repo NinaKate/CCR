@@ -1,5 +1,0 @@
-
-ping.mpi:30912 terminated with signal 11 at PC=401645 SP=7fff68beb150.  Backtrace:
-/user/ninastei/CCR/execs/ping.mpi[0x401645]
-/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x7fa9212ddc05]
-/user/ninastei/CCR/execs/ping.mpi[0x401149]
