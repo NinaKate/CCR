@@ -73,8 +73,8 @@ int main(int argc,char*argv[]){
   func="MPI_Comm_rank";
   errchk(ierr,func);
   //  printf("this is processor %d of %d, reporting for duty!",rank,size);
-  for (int j=0;j<7;j++){
-  messagelength=pow(10,j);
+  for (int j=0;j<20;j++){
+  messagelength=pow(2,j);
   //messagelength = 1;
   ball.resize(messagelength);
   // double *ball=new double[messagelength];
