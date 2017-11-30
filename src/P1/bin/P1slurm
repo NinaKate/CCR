@@ -18,6 +18,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ../execs/P1.mpi
+srun ../execs/P1.mpi>P1out.txt
 
 echo "AND LO!"

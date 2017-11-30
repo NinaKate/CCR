@@ -40,7 +40,7 @@ bool Mandelbrot(float ci,float cj, int N){
 }
 int main(){
   vector<vector<float> > plot;
-    for (int i=2;i<10;i++){
+    for (int i=4;i<10;i++){
     vector<float>point;
      float h = pow(2,-i);
     //    point.push_back(h);

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+./P3P1a.o> ../bin/P3P1a.txt
+
+./P3P1b.o<../execs/coarsein.txt>../bin/P3P1bcoarse.txt
+
+./P3P1b.o<../execs/medin.txt>../bin/P3P1bmed.txt
+
+./P3P1b.o<../execs/finein.txt>../bin/P3P1bfine.txt

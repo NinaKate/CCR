@@ -56,6 +56,7 @@ int main(int argc,char*argv[]){
    for (int i=4;i<10;i++){
     float h = pow(2,-i);//spacing between grid points
     int Ntot = 4.0/h; //number of grid points across the x-axis
+    //std::cout<<"h is "<<h<<" and Ntot is "<<Ntot<<std::endl;
     float Ny = 2.0/h;
     float x=-2.0;
     float y=-1.0;

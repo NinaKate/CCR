@@ -53,7 +53,8 @@ int main(int argc,char*argv[]){
   errchk(ierr,func);
  //I am just doing vertical strips (it's simpler)
  
-    float h =0.05;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.25 for coarse.
+    float h;
+    std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.25 for coarse.
     int Ntot = 4.0/h; //number of grid points across the x-axis
     int Nperproc=Ntot/size; //number of grid points per processor
     int Nleftover=size*(Ntot%size); //leftover grid points
@@ -66,7 +67,7 @@ int main(int argc,char*argv[]){
     //vector<float>real;
     //vector<float>imaginary;
     int numpts = 0;
-    for (int i=Nstart; i<Nend;i++){
+    for (int i=Nstart; i<Nend+1;i++){
       for (int j = 0;j<Ny;j++){
 	if (Mandelbrot(x,y,1000)==true){
 	  // real.push_back(x);

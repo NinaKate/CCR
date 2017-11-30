@@ -1,0 +1,268 @@
+#include <mpi.h>
+#include <stdio.h>
+#include <cmath>
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <math.h>
+#include <vector>
+#include <sstream>
+#include "errchk.hpp"
+using namespace std;
+vector<float> compsq(float real,float imag){
+  float rsq = real*real-imag*imag;
+  float imsq = 2*real*imag;
+  vector<float>endsq;
+  endsq.push_back(rsq);
+  endsq.push_back(imsq);
+  return endsq;
+}
+
+bool Mandelbrot(float ci,float cj, int N){
+  float zm = 0;
+  bool mand = true;
+  vector<float>zvec;
+  zvec.push_back(0);
+  zvec.push_back(0);
+  vector<float> c;
+  c.push_back(ci);
+  c.push_back(cj);
+  float zsq;
+  for (int n = 0;n<N;n++){
+    vector<float>temp;
+    temp = compsq(zvec[0],zvec[1]);
+    zvec[0] = temp[0]+ci;
+    zvec[1] = temp[1]+cj;
+    zm = pow((zvec[0]*zvec[0] + zvec[1]*zvec[1]),0.5);
+    if (zm>=2){
+      mand = false;
+      break;
+    }
+  }
+  return mand;
+}
+int main(int argc,char*argv[]){
+  int rank,size,ierr;
+  char * func;
+  MPI_Init(&argc,&argv);
+  MPI_Comm_set_errhandler(MPI_COMM_WORLD,MPI_ERRORS_RETURN);
+  ierr=MPI_Comm_size(MPI_COMM_WORLD,&size);
+  func = "MPI_Comm_size";
+  errchk(ierr,func);
+  ierr=MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+  func="MPI_Comm_rank";
+  errchk(ierr,func);
+  double t_start,t_stop;
+   for (int i=4;i<size;i++){
+    float h = 0.01;
+    int Ntot = 4.0/h; //number of grid points across the x axis
+    float Ny = 2.0/h;
+    int Nperproc = Ntot/i; //again, vertical stripes make my life much easier
+    int Nleft = i*(Ntot%i); //the ones left unaccounted for
+    int Nstart = rank*Nperproc;
+    int Nend = Nstart+Nperproc;
+    if(rank==i-1){Nend=Ntot;}
+    int numpts = 0;
+    t_start=MPI_Wtime();
+    if (rank<i){
+    float x=-2;
+    float y=-1;
+    //vector<float>real;
+    //vector<float>imaginary;
+    for (int i=Nstart; i<Nend+1;i++){
+      for (int j = 0;j<Ny;j++){
+	if (Mandelbrot(x,y,1000)==true){
+	  //real.push_back(x);
+	  // imaginary.push_back(y);
+	  //                cout<<x<<","<<y<<endl;
+	  numpts +=1;
+	}
+	y = -1 + h*j;
+      }
+      x = -2  + h*i;
+    }}
+    float myarea = numpts*h*h;
+    float area = 0;
+    00
+      0-0.0625
+      00.0625
+      0-0.125
+      00.125
+      0-0.1875
+      00.1875
+      0-0.25
+      00.25
+      0-0.3125
+      00.3125
+      0-0.375
+      00.375
+      0-0.4375
+      00.4375
+      0-0.5
+      00.5
+      0-0.5625
+      00.5625
+      0-0.625
+      00.625
+      -0.06250
+      0.06250
+      -0.0625-0.0625
+      -0.06250.0625
+      0.0625-0.0625
+      0.06250.0625
+      -0.0625-0.125
+      -0.06250.125
+      0.0625-0.125
+      0.06250.125
+      -0.0625-0.1875
+      -0.06250.1875
+      0.0625-0.1875
+      0.06250.1875
+      -0.0625-0.25
+      -0.06250.25
+      0.0625-0.25
+      0.06250.25
+      -0.0625-0.3125
+      -0.06250.3125
+      0.0625-0.3125
+      0.06250.3125
+      -0.0625-0.375
+      -0.06250.375
+      0.0625-0.375
+      0.06250.375
+      -0.0625-0.4375
+      -0.06250.4375
+      0.0625-0.4375
+      0.06250.4375
+      -0.0625-0.5
+      -0.06250.5
+      0.0625-0.5
+      0.06250.5
+      -0.0625-0.5625
+      -0.06250.5625
+      0.0625-0.5625
+      0.06250.5625
+      -0.0625-0.625
+      -0.06250.625
+      -0.0625-0.6875
+      -0.06250.6875
+      -0.0625-0.75
+      -0.06250.75
+      -0.0625-0.8125
+      -0.06250.8125
+      0-1
+      -0.1250
+      0.1250
+      -0.125-0.0625
+      -0.1250.0625
+      0.125-0.0625
+      0.1250.0625
+      -0.125-0.125
+      -0.1250.125
+      0.125-0.125
+      0.1250.125
+      -0.125-0.1875
+      -0.1250.1875
+      0.125-0.1875
+      0.1250.1875
+      -0.125-0.25
+      -0.1250.25
+      0.125-0.25
+      0.1250.25
+      -0.125-0.3125
+      -0.1250.3125
+      0.125-0.3125
+      0.1250.3125
+      -0.125-0.375
+      -0.1250.375
+      0.125-0.375
+      0.1250.375
+      -0.125-0.4375
+      -0.1250.4375
+      0.125-0.4375
+      0.1250.4375
+      -0.125-0.5
+      -0.1250.5
+      0.125-0.5
+      0.1250.5
+      -0.125-0.5625
+      -0.1250.5625
+      0.125-0.5625
+      0.1250.5625
+      -0.125-0.625
+      -0.1250.625
+      0.125-0.625
+      0.1250.625
+      -0.125-0.6875
+      -0.1250.6875
+      -0.125-0.75
+      -0.1250.75
+      -0.125-0.8125
+      -0.1250.8125
+      -0.125-0.875
+      -0.1250.875
+      -0.18750
+      0.18750
+      -0.1875-0.0625
+      -0.18750.0625
+      0.1875-0.0625
+      0.18750.0625
+      -0.1875-0.125
+      -0.18750.125
+      0.1875-0.125
+      0.18750.125
+      -0.1875-0.1875
+      -0.18750.1875
+      0.1875-0.1875
+      0.18750.1875
+      -0.1875-0.25
+      -0.18750.25
+      0.1875-0.25
+      0.18750.25
+      -0.1875-0.3125
+      -0.18750.3125
+      0.1875-0.3125
+      0.18750.3125
+      -0.1875-0.375
+      -0.18750.375
+      0.1875-0.375
+      0.18750.375
+      -0.1875-0.4375
+      -0.18750.4375
+      0.1875-0.4375
+      0.18750.4375
+      -0.1875-0.5
+      -0.18750.5
+      0.1875-0.5
+      0.18750.5
+      -0.1875-0.5625
+      -0.18750.5625
+      -0.1875-0.625
+      -0.18750.625
+      -0.1875-0.6875
+      -0.18750.6875
+      -0.1875-0.75
+      -0.18750.75
+      -0.1875-0.8125
+      -0.18750.8125
+      -0.250
+      0.250
+      -0.25-0.0625
+      -0.250.0625
+      0.25-0.0625
+      0.250.0625
+      -0.25-0.125
+      -0.250.125
+      0.25-0.125
+      0.250.125
+      -0.25-0.1875
+-0.25
+    ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
+    func="MPI_Reduce";
+    errchk(ierr,func);
+    t_stop=MPI_Wtime();
+    if(rank==0){ std::cout<<i<<'\t'<<(t_stop-t_start)<<std::endl; }
+   }
+  MPI_Finalize();
+  return(0);
+}

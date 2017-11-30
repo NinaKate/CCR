@@ -52,22 +52,21 @@ int main(int argc,char*argv[]){
   ierr=MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   func="MPI_Comm_rank";
   errchk(ierr,func);
-
    for (int i=4;i<10;i++){
     float h = pow(2,-i);//spacing between grid points
     int Ntot = 4.0/h; //number of grid points across the x-axis
     int Nperproc=Ntot/size; //number of grid points per processor
-    int Nleftover=size*(Ntot%size); //leftover grid points
+    int Nleftover=(Ntot%size); //leftover grid points
     int Nstart = rank*Nperproc;
     int Nend = Nstart+Nperproc;
-    if(rank==size-1){Nend = Ntot;}//giving the leftover grid points to the last processor
+    if(rank==(size-1)){Nend = Ntot;}//giving the leftover grid points to the last processor
     float Ny = 2.0/h;
     float x=-2.0;
     float y=-1.0;
     //vector<float>real;
     //vector<float>imaginary;
     int numpts = 0;
-    for (int i=Nstart; i<Nend;i++){
+    for (int i=Nstart; i<Nend+1;i++){
       for (int j = 0;j<Ny;j++){
 	if (Mandelbrot(x,y,1000)==true){
 	  //real.push_back(x);
@@ -80,11 +79,15 @@ int main(int argc,char*argv[]){
     }
     float myarea = numpts*h*h;
     float area = 0;
+    ierr=MPI_Barrier(MPI_COMM_WORLD);
+    func = "MPI_Barrier";
+    errchk(ierr,func);//just to make sure everyone gets here before I do the reduce call
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func = "MPI_Reduce";
     errchk(ierr,func);
     if(rank==0){std::cout<<h<<'\t'<<area<<std::endl;}
-   }
+ }
+  
   MPI_Finalize();
   return(0);
 }

@@ -5,7 +5,7 @@ CC1=g++ -std=c++11
 
 loc = ../execs/
 
-all: P3P1a.o P3P1b.o P3P2a.mpi P3P2b.mpi P3P2c.mpi P3P3a.mpi
+all: P3P1a.o P3P1b.o P3P2a.mpi P3P2b.mpi P3P2c.mpi P3P3a.mpi P3P3b.mpi P3P3c.mpi
 
 P3P1a.o: P3P1a.cpp
 	$(CC1) $^  -o $(loc)P3P1a.o
@@ -24,5 +24,9 @@ P3P2c.mpi: P3P2c.cpp
 
 P3P3a.mpi: P3P3a.cpp
 	$(CC) $^ -o $(loc)P3P3a.mpi
+P3P3b.mpi: P3P3b.cpp
+	$(CC) $^ -o $(loc)P3P3b.mpi
+P3P3c.mpi: P3P3c.cpp
+	$(CC) $^ -o $(loc)P3P3c.mpi
 clean:
 	rm -rf $(loc)*.o $(loc)*.mpi

@@ -1,0 +1,49 @@
+I, processor 21 have now finished, with an area of 0 which corresponds to 0 points. Thank you. 
+
+I, processor 0 have now finished, with an area of 0.00390625 which corresponds to 1 points. Thank you. 
+
+I, processor 22 have now finished, with an area of 0 which corresponds to 0 points. Thank you. 
+
+I, processor 20 have now finished, with an area of 0 which corresponds to 0 points. Thank you. 
+
+I, processor 23 have now finished, with an area of 0 which corresponds to 0 points. Thank you. 
+
+I, processor 19 have now finished, with an area of 0.015625 which corresponds to 4 points. Thank you. 
+
+I, processor 1 have now finished, with an area of 0.0078125 which corresponds to 2 points. Thank you. 
+I, processor 3 have now finished, with an area of 0.0078125 which corresponds to 2 points. Thank you. 
+
+
+I, processor 4 have now finished, with an area of 0.0078125 which corresponds to 2 points. Thank you. 
+
+I, processor 2 have now finished, with an area of 0.0078125 which corresponds to 2 points. Thank you. 
+
+I, processor 5 have now finished, with an area of 0.015625 which corresponds to 4 points. Thank you. 
+
+I, processor 6 have now finished, with an area of 0.0234375 which corresponds to 6 points. Thank you. 
+
+I, processor 10 have now finished, with an area of 0.0390625 which corresponds to 10 points. Thank you. 
+
+I, processor 9 have now finished, with an area of 0.046875 which corresponds to 12 points. Thank you. 
+
+I, processor 8 have now finished, with an area of 0.0625 which corresponds to 16 points. Thank you. 
+
+I, processor 7 have now finished, with an area of 0.0625 which corresponds to 16 points. Thank you. 
+
+I, processor 11 have now finished, with an area of 0.117188 which corresponds to 30 points. Thank you. 
+
+I, processor 18 have now finished, with an area of 0.128906 which corresponds to 33 points. Thank you. 
+
+I, processor 12 have now finished, with an area of 0.140625 which corresponds to 36 points. Thank you. 
+
+I, processor 17 have now finished, with an area of 0.148438 which corresponds to 38 points. Thank you. 
+
+I, processor 13 have now finished, with an area of 0.148438 which corresponds to 38 points. Thank you. 
+
+I, processor 16 have now finished, with an area of 0.160156 which corresponds to 41 points. Thank you. 
+
+I, processor 14 have now finished, with an area of 0.1875 which corresponds to 48 points. Thank you. 
+
+I, processor 15 have now finished, with an area of 0.21875 which corresponds to 56 points. Thank you. 
+
+0.0625	1.55078
