@@ -24,11 +24,11 @@ int main(int argc,char*argv[]){
      func="MPI_Comm_rank";
      errchk(ierr,func);
   //  printf("this is processor %d of %d, reporting for duty!",rank,size);
-  for (int j=0;j<20;j++){
-  messagelength=pow(2,j);
+  for (int j=1;j<1001;j++){
+    messagelength=pow(j,2);
   ball.resize(messagelength);
   for (int i=0;i<messagelength;i++){ball[i]=0.0;}
-  max_volleys=10;
+  max_volleys=1000;
   target = (rank+1)%2;
   t_start = MPI_Wtime();
   int volleys=0;
