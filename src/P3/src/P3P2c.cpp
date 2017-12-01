@@ -56,7 +56,7 @@ int main(int argc,char*argv[]){
    for (int i=4;i<size;i++){
     float h = 0.01;
     int Ntot = 4.0/h; //number of grid points across the x axis
-    float Ny = 2.0/h;
+    int Ny = 2.0/h;
     int Nperproc = Ntot/i; //again, vertical stripes make my life much easier
     int Nleft = i*(Ntot%i); //the ones left unaccounted for
     int Nstart = rank*Nperproc;
@@ -70,16 +70,18 @@ int main(int argc,char*argv[]){
     //vector<float>real;
     //vector<float>imaginary;
     for (int i=Nstart; i<Nend;i++){
+      x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
-	if (Mandelbrot(x,y,1000)==true){
+	y = -1 + h*j;
+	if (Mandelbrot(x,y,10000)==true){
 	  //real.push_back(x);
 	  // imaginary.push_back(y);
 	  //                cout<<x<<","<<y<<endl;
 	  numpts +=1;
 	}
-	y = -1 + h*j;
+	
       }
-      x = -2  + h*i;
+    
     }}
     float myarea = numpts*h*h;
     float area = 0;

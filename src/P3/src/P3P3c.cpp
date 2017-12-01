@@ -53,7 +53,7 @@ int main(int argc,char*argv[]){
   func="MPI_Comm_rank";
   errchk(ierr,func);
   double t_start,t_stop;
-   for (int i=4;i<size;i++){
+   for (int n=4;n<size;n++){
     float h = 0.01;
     int Ntot = 4.0/h; //number of grid points across the x axis
     float Ny = 2.0/h;
@@ -62,22 +62,24 @@ int main(int argc,char*argv[]){
     func = "MPI_Barrier";
     errchk(ierr,func);
     t_start=MPI_Wtime();
-    if (rank<i){
+    if (rank<n){
     float x=-2;
     float y=-1;
     //vector<float>real;
     //vector<float>imaginary;
-    for (int i=rank; i<Ntot;i+=size){
+    for (int i=rank; i<Ntot;i+=n){
+      x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
-	if (Mandelbrot(x,y,1000)==true){
+	y = -1 + h*j;
+	if (Mandelbrot(x,y,10000)==true){
 	  //real.push_back(x);
 	  // imaginary.push_back(y);
 	  //                cout<<x<<","<<y<<endl;
 	  numpts +=1;
 	}
-	y = -1 + h*j;
+	
       }
-      x = -2  + h*i;
+     
     }}
     float myarea = numpts*h*h;
     float area = 0;
@@ -88,7 +90,7 @@ int main(int argc,char*argv[]){
     func="MPI_Reduce";
     errchk(ierr,func);
     t_stop=MPI_Wtime();
-    if(rank==0){ std::cout<<i<<'\t'<<(t_stop-t_start)<<std::endl; }
+    if(rank==0){ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
    }
   MPI_Finalize();
   return(0);

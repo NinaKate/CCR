@@ -67,17 +67,19 @@ int main(int argc,char*argv[]){
     //vector<float>real;
     //vector<float>imaginary;
     int numpts = 0;
-    for (int i=Nstart; i<Nend+1;i++){
+    for (int i=Nstart; i<Nend;i++){
+      x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
-	if (Mandelbrot(x,y,1000)==true){
+	y = -1 + h*j;
+	if (Mandelbrot(x,y,10000)==true){
 	  // real.push_back(x);
 	  // imaginary.push_back(y);
 	  std::cout<<x<<'\t'<<y<<std::endl;
 	  numpts +=1;
 	}
-	y = -1 + h*j;
+	
       }
-      x = -2 + h*i;
+    
     }
   MPI_Finalize();
   return(0);

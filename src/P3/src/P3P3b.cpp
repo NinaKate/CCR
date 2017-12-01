@@ -51,29 +51,32 @@ int main(int argc,char*argv[]){
   ierr=MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   func="MPI_Comm_rank";
   errchk(ierr,func);
- //I am just doing vertical strips (it's simpler)
- 
     float h;
-    std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.25 for coarse. Now determined at runtime. 
-    int Ntot = 4.0/h; //number of grid points across the x-axis
-    int Ny = 2.0/h;
+    std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.1 for coarse. Now determined at runtime. 
+    int Ntot = 4/h; //number of grid points across the x-axis
+    int Ny = 2/h;
     float x=-2;
     float y=-1;
     //vector<float>real;
     //vector<float>imaginary;
     int numpts = 0;
     for (int i=rank; i<Ntot;i+=size){
+      x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
-	if (Mandelbrot(x,y,1000)==true){
+	y= -1 + h*j;
+	if (Mandelbrot(x,y,10000)==true){
 	  // real.push_back(x);
 	  // imaginary.push_back(y);
 	  std::cout<<x<<'\t'<<y<<std::endl;
 	  numpts +=1;
 	}
-	y = -1 + h*j;
+       
       }
-      x = -2 + h*i;
+      
     }
+    ierr=MPI_Barrier(MPI_COMM_WORLD);
+    func="MPI_Barrier";
+    errchk(ierr,func);
   MPI_Finalize();
   return(0);
 }
