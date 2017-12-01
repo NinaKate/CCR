@@ -83,9 +83,9 @@ int main(int argc,char*argv[]){
     }}
     float myarea = numpts*h*h;
     float area = 0;
-    ierr=MPI_Barrier(MPI_COMM_WORLD);
-    func="MPI_Barrier";
-    errchk(ierr,func);
+    //ierr=MPI_Barrier(MPI_COMM_WORLD);
+    //func="MPI_Barrier";
+    // errchk(ierr,func);
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func="MPI_Reduce";
     errchk(ierr,func);
