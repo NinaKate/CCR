@@ -11,7 +11,7 @@ fine = prefix+"bfine.txt"
 [x2,y2]=rp.read_plot(medium)
 [x3,y3]=rp.read_plot(fine)
 fig,(ax1,ax2,ax3)=plt.subplots(3)
-ca = 10*10
+ca = 25*25
 ax1.scatter(x1,y1,s=ca,marker='s')
 #ax1.set_title("Coarse grid plot, h=0.25")
 ma = 4*4
