@@ -56,18 +56,13 @@ int main(int argc,char*argv[]){
     float h;
     std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.25 for coarse. Now determined at runtime. 
     int Ntot = 4.0/h; //number of grid points across the x-axis
-    int Nperproc=Ntot/size; //number of grid points per processor
-    int Nleftover=size*(Ntot%size); //leftover grid points
-    int Nstart = rank*Nperproc;
-    int Nend = Nstart+Nperproc;
-    if(rank==size-1){Nend = Ntot;}//I am assigning the leftover grid points to the last processor
     int Ny = 2.0/h;
     float x=-2;
     float y=-1;
     //vector<float>real;
     //vector<float>imaginary;
     int numpts = 0;
-    for (int i=Nstart; i<Nend;i++){
+    for (int i=rank; i<Ntot;i+=size){
       for (int j = 0;j<Ny;j++){
 	if (Mandelbrot(x,y,1000)==true){
 	  // real.push_back(x);
