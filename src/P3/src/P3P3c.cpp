@@ -67,8 +67,8 @@ int main(int argc,char*argv[]){
     float x=-2;
     float y=-1;
     for (int i=rank; i<Ntot;i+=n){
-      int xi = int(Ntot/Ny);
-      int yi = Ntot%Ny;
+      int xi = int(i/Ny);
+      int yi = i%Ny;
       x = -2 + h*xi;
       y = -1 + h*yi;
 	if (Mandelbrot(x,y,10000)==true){

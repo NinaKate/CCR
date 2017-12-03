@@ -6,7 +6,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
-#SBATCH --time=00:30:00
+#SBATCH --time=00:10:00
 #SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
@@ -19,8 +19,12 @@ module list
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
 srun ../execs/P3P3a.mpi>P3P3a.txt
+echo "And that is part A done"
 srun ../execs/P3P3b.mpi<../execs/coarsein.txt>P3P3bcoarse.txt
+echo "Part B coarse!"
 srun ../execs/P3P3b.mpi<../execs/medin.txt>P3P3bmed.txt
+echo "Part b med!"
 srun ../execs/P3P3b.mpi<../execs/finein.txt>P3P3bfine.txt
+echo "part b fine!"
 srun ../execs/P3P3c.mpi>P3P3c.txt
 echo "AND LO!"
