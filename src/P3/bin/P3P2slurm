@@ -21,5 +21,5 @@ srun ../execs/P3P2a.mpi>P3P2a.txt
 srun ../execs/P3P2b.mpi <../execs/coarsein.txt>P3P2bcoarse.txt
 srun ../execs/P3P2b.mpi<../execs/medin.txt>P3P2bmed.txt
 srun ../execs/P3P2b.mpi<../execs/finein.txt>P3P2bfine.txt
-srun ../execs/P3P2cr.mpi>P3P2c.txt
+srun ../execs/P3P2c.mpi>P3P2c.txt
 echo "AND LO!"
