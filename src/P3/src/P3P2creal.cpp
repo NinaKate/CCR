@@ -42,9 +42,8 @@ bool Mandelbrot(float ci,float cj, int N){
   return mand;
 }
 int main(int argc,char*argv[]){
-  int rank,size,ierr,xi,yi;
+  int rank,size,ierr;
   char * func;
-  float x,y;
   MPI_Init(&argc,&argv);
   MPI_Comm_set_errhandler(MPI_COMM_WORLD,MPI_ERRORS_RETURN);
   ierr=MPI_Comm_size(MPI_COMM_WORLD,&size);
@@ -54,32 +53,36 @@ int main(int argc,char*argv[]){
   func="MPI_Comm_rank";
   errchk(ierr,func);
   double t_start,t_stop;
-   for (int n=4;n<size;n++){
+   for (int i=4;i<size;i++){
     float h = 0.01;
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;
-    int Ntot = Nx*Ny;
-    int Nperproc = int(Ntot/n); //number of grid points per processor
-    int Nleft = (Ntot%n); //the ones left unaccounted for
+    int Nperproc = int(Nx/i); //again, vertical stripes make my life much easier
+    int Nleft = (Nx%i); //the ones left unaccounted for
     int Nstart = rank*Nperproc;
     int Nend = Nstart+Nperproc;
-    if(rank==n-1){Nend=Ntot;}
+    if(rank==i-1){Nend=Nx;}
     int numpts = 0;
     t_start=MPI_Wtime();
-    if (rank<n){
+    if (rank<i){
+    float x=-2;
+    float y=-1;
+    //vector<float>real;
+    //vector<float>imaginary;
     for (int i=Nstart; i<Nend;i++){
-      xi = int(i/Ny);
-      yi = i%Ny;
-      x = -2 + h*xi;
-      y = -1 + h*yi;
+      x = -2 + h*i;
+      for (int j = 0;j<Ny;j++){
+	y = -1 + h*j;
 	if (Mandelbrot(x,y,10000)==true){
+	  //real.push_back(x);
+	  // imaginary.push_back(y);
+	  //                cout<<x<<","<<y<<endl;
 	  numpts +=1;
 	}
 	
-    }
+      }
     
-    }   
-   
+    }}
     float myarea = numpts*h*h;
     float area = 0;
     //ierr=MPI_Barrier(MPI_COMM_WORLD);
@@ -89,7 +92,7 @@ int main(int argc,char*argv[]){
     func="MPI_Reduce";
     errchk(ierr,func);
     t_stop=MPI_Wtime();
-    if(rank==0){ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
+    if(rank==0){ std::cout<<i<<'\t'<<(t_stop-t_start)<<std::endl; }
    }
   MPI_Finalize();
   return(0);

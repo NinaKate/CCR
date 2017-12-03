@@ -4,5 +4,3 @@
 Currently Loaded Modules:
   1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
 
-slurmstepd: error: *** STEP 7794744.0 ON cpn-k08-41-02 CANCELLED AT 2017-12-01T16:54:59 DUE TO TIME LIMIT ***
-slurmstepd: error: *** JOB 7794744 ON cpn-k08-41-02 CANCELLED AT 2017-12-01T16:54:59 DUE TO TIME LIMIT ***

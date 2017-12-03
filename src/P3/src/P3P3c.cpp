@@ -55,8 +55,9 @@ int main(int argc,char*argv[]){
   double t_start,t_stop;
    for (int n=4;n<size;n++){
     float h = 0.01;
-    int Ntot = 4.0/h; //number of grid points across the x axis
-    float Ny = 2.0/h;
+    int Nx = 4/h; //number of grid points across the x axis
+    int Ny = 2/h;
+    int Ntot = Nx*Ny;
     int numpts = 0;
     ierr=MPI_Barrier(MPI_COMM_WORLD);
     func = "MPI_Barrier";
@@ -65,22 +66,18 @@ int main(int argc,char*argv[]){
     if (rank<n){
     float x=-2;
     float y=-1;
-    //vector<float>real;
-    //vector<float>imaginary;
     for (int i=rank; i<Ntot;i+=n){
-      x = -2 + h*i;
-      for (int j = 0;j<Ny;j++){
-	y = -1 + h*j;
+      int xi = int(Ntot/Ny);
+      int yi = Ntot%Ny;
+      x = -2 + h*xi;
+      y = -1 + h*yi;
 	if (Mandelbrot(x,y,10000)==true){
-	  //real.push_back(x);
-	  // imaginary.push_back(y);
-	  //                cout<<x<<","<<y<<endl;
 	  numpts +=1;
 	}
 	
       }
      
-    }}
+    }
     float myarea = numpts*h*h;
     float area = 0;
     ierr=MPI_Barrier(MPI_COMM_WORLD);

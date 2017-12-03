@@ -42,7 +42,7 @@ bool Mandelbrot(float ci,float cj, int N){
   return mand;
 }
 int main(int argc,char*argv[]){
-  int rank,size,ierr;
+  int rank,size,ierr,xi,yi,numpts;
   char * func;
   MPI_Init(&argc,&argv);
   MPI_Comm_set_errhandler(MPI_COMM_WORLD,MPI_ERRORS_RETURN);
@@ -52,31 +52,29 @@ int main(int argc,char*argv[]){
   ierr=MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   func="MPI_Comm_rank";
   errchk(ierr,func);
-   for (int i=4;i<10;i++){
-    float h = pow(2,-i);//spacing between grid points
-    int Ntot = 4.0/h; //number of grid points across the x-axis
-    int Nperproc=Ntot/size; //number of grid points per processor
+   for (int n=4;n<10;n++){
+    float h = pow(2,-n);//spacing between grid points
+    int Nx = 4/h; //number of grid points across the x-axis
+    int Ny = 2/h;
+    int Ntot = Nx*Ny;
+    int Nperproc=Ntot/size; //number of points per processor
     int Nleftover=(Ntot%size); //leftover grid points
     int Nstart = rank*Nperproc;
     int Nend = Nstart+Nperproc;
     if(rank==(size-1)){Nend = Ntot;}//giving the leftover grid points to the last processor
-    float Ny = 2.0/h;
     float x=-2.0;
     float y=-1.0;
-    //vector<float>real;
-    //vector<float>imaginary;
-    int numpts = 0;
+    numpts = 0;
     for (int i=Nstart; i<Nend;i++){
-      x = -2 + h*i;
-      for (int j = 0;j<Ny;j++){
-	y = -1 + h*j;
+      xi = int(i/Ny);
+      yi = i%Ny;
+      x = -2 + h*xi;
+      y = -1 + h*yi;
 	if (Mandelbrot(x,y,10000)==true){
-	  //real.push_back(x);
-	  //imaginary.push_back(y);
 	  numpts +=1;
 	}
       }
-    }
+    
     float myarea = numpts*h*h;
     float area = 0;
     ierr=MPI_Barrier(MPI_COMM_WORLD);

@@ -57,7 +57,7 @@ int main(){
       x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
 	y = -1 + h*j;
-	if (Mandelbrot(x,y,1000)==true){
+	if (Mandelbrot(x,y,10000)==true){
 	  // real.push_back(x);
 	  // imaginary.push_back(y);
 	  std::cout<<x<<'\t'<<y<<std::endl;

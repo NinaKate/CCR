@@ -42,7 +42,7 @@ bool Mandelbrot(float ci,float cj, int N){
   return mand;
 }
 int main(int argc,char*argv[]){
-  int rank,size,ierr;
+  int rank,size,ierr,xi,yi;
   char * func;
   MPI_Init(&argc,&argv);
   MPI_Comm_set_errhandler(MPI_COMM_WORLD,MPI_ERRORS_RETURN);
@@ -55,25 +55,22 @@ int main(int argc,char*argv[]){
 
    for (int i=4;i<10;i++){
     float h = pow(2,-i);//spacing between grid points
-    int Ntot = 4.0/h; //number of grid points across the x-axis
+    int Nx = 4/h; //number of grid points across the x-axis
     //std::cout<<"h is "<<h<<" and Ntot is "<<Ntot<<std::endl;
-    float Ny = 2.0/h;
+    int Ny = 2/h;
+    int Ntot = Nx*Ny;
     float x=-2.0;
     float y=-1.0;
-    //vector<float>real;
-    //vector<float>imaginary;
     int numpts = 0;
-    for (int i=rank; i<Ntot;i+=size){
-      x = -2 + h*i;
-      for (int j = 0;j<Ny;j++){
-	y = -1+h*j;
+    for (int j=rank; j<Ntot;j+=size){
+      xi = int(Ntot/Ny);
+      yi = Ntot%Ny;
+      x = -2 + h*xi;
+      y = -1 + h*yi;
 	if (Mandelbrot(x,y,10000)==true){
-	  //real.push_back(x);
-	  //imaginary.push_back(y);
 	  numpts +=1;
-	}
 	
-      }
+	}
     
     }
     float myarea = numpts*h*h;
