@@ -18,11 +18,11 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ../execs/P3P1a.o>P3P1a.txt
-#echo "Alright, that's A done!"
-#srun ../execs/P3P1b.o<../execs/coarsein.txt>P3P1bcoarse.txt
-#echo "And that is the coarse one done"
-#srun ../execs/P3P1b.o<../execs/medin.txt>P3P1bmed.txt
-#echo "And the medium"
-#srun ../execs/P3P1b.o<../execs/finein.txt>P3P1bfine.txt
+#srun ../execs/P3P1a.o>P3P1a.txt
+echo "Alright, that's A done!"
+srun ../execs/P3P1b.o<../execs/coarsein.txt>P3P1bcoarse.txt
+echo "And that is the coarse one done"
+srun ../execs/P3P1b.o<../execs/medin.txt>P3P1bmed.txt
+echo "And the medium"
+srun ../execs/P3P1b.o<../execs/finein.txt>P3P1bfine.txt
 echo "AND LO!"

@@ -54,7 +54,7 @@ int main(int argc,char*argv[]){
   func="MPI_Comm_rank";
   errchk(ierr,func);
   double t_start,t_stop;
-   for (int n=4;n<size;n++){
+   for (int n=1;n<size;n++){
     float h = 0.01;
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;

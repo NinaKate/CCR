@@ -1,10 +1,7 @@
 # I am a comment, and I want to say that the variable CC will be 
 # the compiler to use.                                                         
-<<<<<<< HEAD
 CC=mpicxx -O3
-=======
-CC=mpicxx
->>>>>>> a55a2c9f421773e9f1ea0c1febaf0741dd229b03
+CC=mpicxx -O3
 CC1=g++ -std=c++11 -O3
 
 loc = ../execs/
