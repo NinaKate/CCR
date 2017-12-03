@@ -65,7 +65,10 @@ int main(int argc,char*argv[]){
     int Nend = Nstart+Nperproc;
     if(rank==n-1){Nend=Ntot;}
     int numpts = 0;
-    t_start=MPI_Wtime();
+    ierr=MPI_Barrier(MPI_COMM_WORLD);                                        
+    func="MPI_Barrier";                                                      
+    errchk(ierr,func); 
+    if (rank==0){t_start=MPI_Wtime();}
     if (rank<n){
     for (int i=Nstart; i<Nend;i++){
       xi = int(i/Ny);
@@ -82,9 +85,9 @@ int main(int argc,char*argv[]){
    
     float myarea = numpts*h*h;
     float area = 0;
-    //ierr=MPI_Barrier(MPI_COMM_WORLD);
-    //func="MPI_Barrier";
-    // errchk(ierr,func);
+    ierr=MPI_Barrier(MPI_COMM_WORLD);
+    func="MPI_Barrier";
+    errchk(ierr,func);
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func="MPI_Reduce";
     errchk(ierr,func);

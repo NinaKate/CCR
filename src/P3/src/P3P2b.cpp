@@ -54,7 +54,7 @@ int main(int argc,char*argv[]){
  //I am just doing vertical strips (it's simpler)
  
     float h;
-    std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.25 for coarse.
+    std::cin>>h;//spacing between grid points; I use 0.005 for fine, 0.05 for medium, and 0.1 for coarse.
     int Nx = 4/h; //number of grid points across the x-axis
     int Ny = 2/h; //number of grid points across the y-axis
     int Ntot = Nx*Ny;

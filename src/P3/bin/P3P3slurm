@@ -6,7 +6,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
-#SBATCH --time=00:10:00
+#SBATCH --time=00:30:00
 #SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
