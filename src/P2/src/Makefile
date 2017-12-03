@@ -2,7 +2,7 @@
 # the compiler to use.                                                         
 CC=mpicxx
 
-loc = ../exec/
+loc = ../execs/
 all: P2.mpi
 
 P2.mpi: P2.cpp 
