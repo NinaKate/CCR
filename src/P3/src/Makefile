@@ -28,6 +28,5 @@ P3P3b.mpi: P3P3b.cpp
 	$(CC) $^ -o $(loc)P3P3b.mpi
 P3P3c.mpi: P3P3c.cpp
 	$(CC) $^ -o $(loc)P3P3c.mpi
-
 clean:
 	rm -rf $(loc)*.o $(loc)*.mpi

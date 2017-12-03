@@ -42,7 +42,7 @@ int main(){
   ofstream Parta;
   Parta.open("../bin/MandelbrotSa.txt");
     for (int n=4;n<10;n++){
-    float h = pow(2,-n);
+      float h = 0.01;//pow(2,-n);
     int Nx = 4/h; //number of grid points per side in x
     int Ny = 2/h;
     int Ntot = Nx*Ny;

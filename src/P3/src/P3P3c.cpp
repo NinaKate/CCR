@@ -62,7 +62,10 @@ int main(int argc,char*argv[]){
     ierr=MPI_Barrier(MPI_COMM_WORLD);
     func = "MPI_Barrier";
     errchk(ierr,func);
-    t_start=MPI_Wtime();
+    if (rank==0){t_start=MPI_Wtime();}
+    ierr=MPI_Barrier(MPI_COMM_WORLD);
+    func = "MPI_Barrier";
+    errchk(ierr,func);
     if (rank<n){
     float x=-2;
     float y=-1;
@@ -86,8 +89,8 @@ int main(int argc,char*argv[]){
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func="MPI_Reduce";
     errchk(ierr,func);
-    t_stop=MPI_Wtime();
-    if(rank==0){ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
+    if(rank==0){t_stop=MPI_Wtime();
+ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
    }
   MPI_Finalize();
   return(0);

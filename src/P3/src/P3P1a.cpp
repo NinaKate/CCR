@@ -40,24 +40,18 @@ bool Mandelbrot(float ci,float cj, int N){
 }
 int main(){
   vector<vector<float> > plot;
-    for (int i=4;i<9;i++){
-    vector<float>point;
-     float h = pow(2,-i);//spacing between grid points
-    float Nx = 4.0/h; //number of grid points per side in x
-    float Ny = 2.0/h;
+    for (int n=4;n<10;n++){
+     float h = pow(2,-n);//spacing between grid points
+    int Nx = 4/h; //number of grid points per side in x
+    int Ny = 2/h;
     float x=-2;
     float y=-1;
-    vector<float>real;
-    vector<float>imaginary;
     int numpts = 0;
     for (int i=0; i<Nx;i++){
       x = -2 + h*i;
       for (int j = 0;j<Ny;j++){
 	y = -1 + h*j;
 	if (Mandelbrot(x,y,10000)==true){
-	  // real.push_back(x);
-	  //imaginary.push_back(y);
-	  //	  std::cout<<x<<'\t'<<y<<std::endl;
 	  numpts +=1;
 	}
        
