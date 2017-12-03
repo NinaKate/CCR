@@ -6,7 +6,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
-#SBATCH --time=00:05:00
+#SBATCH --time=00:30:00
 #SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
@@ -18,8 +18,8 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 srun ../execs/P3P2a.mpi>P3P2a.txt
-#srun ../execs/P3P2b.mpi <../execs/coarsein.txt>P3P2bcoarse.txt
-#srun ../execs/P3P2b.mpi<../execs/medin.txt>P3P2bmed.txt
-#srun ../execs/P3P2b.mpi<../execs/finein.txt>P3P2bfine.txt
-#srun ../execs/P3P2c.mpi>P3P2c.txt
+srun ../execs/P3P2b.mpi <../execs/coarsein.txt>P3P2bcoarse.txt
+srun ../execs/P3P2b.mpi<../execs/medin.txt>P3P2bmed.txt
+srun ../execs/P3P2b.mpi<../execs/finein.txt>P3P2bfine.txt
+srun ../execs/P3P2cr.mpi>P3P2c.txt
 echo "AND LO!"

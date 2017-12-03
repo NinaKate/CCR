@@ -68,7 +68,7 @@ int main(int argc,char*argv[]){
     ierr=MPI_Barrier(MPI_COMM_WORLD);                                        
     func="MPI_Barrier";                                                      
     errchk(ierr,func); 
-    if (rank==0){t_start=MPI_Wtime();}
+    t_start=MPI_Wtime();
     if (rank<n){
     for (int i=Nstart; i<Nend;i++){
       xi = int(i/Ny);

@@ -53,18 +53,18 @@ int main(int argc,char*argv[]){
   func="MPI_Comm_rank";
   errchk(ierr,func);
   double t_start,t_stop;
-   for (int i=4;i<size;i++){
+   for (int n=4;n<size;n++){
     float h = 0.01;
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;
-    int Nperproc = int(Nx/i); //again, vertical stripes make my life much easier
-    int Nleft = (Nx%i); //the ones left unaccounted for
+    int Nperproc = int(Nx/n); //again, vertical stripes make my life much easier
+    int Nleft = (Nx%n); //the ones left unaccounted for
     int Nstart = rank*Nperproc;
     int Nend = Nstart+Nperproc;
-    if(rank==i-1){Nend=Nx;}
+    if(rank==n-1){Nend=Nx;}
     int numpts = 0;
     t_start=MPI_Wtime();
-    if (rank<i){
+    if (rank<n){
     float x=-2;
     float y=-1;
     //vector<float>real;
@@ -92,7 +92,7 @@ int main(int argc,char*argv[]){
     func="MPI_Reduce";
     errchk(ierr,func);
     t_stop=MPI_Wtime();
-    if(rank==0){ std::cout<<i<<'\t'<<(t_stop-t_start)<<std::endl; }
+    if(rank==0){ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
    }
   MPI_Finalize();
   return(0);
