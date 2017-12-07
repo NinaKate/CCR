@@ -8,7 +8,8 @@ yb = [0.0]*len(x)
 for i in range(0,len(x)):
     yb[i]=y[0]/y[i]
 
-plt.plot(x,y)
-plt.plot(x,yb)
-plt.title("Time and Speedup as a function of core count")
+p1,=plt.plot(x,y)
+p2,=plt.plot(x,yb)
+plt.legend([p1,p2],["Time","Speedup"])
+plt.title("Time and Speedup as a function of core count, grid spacing 0.01")
 plt.show()
