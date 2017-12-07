@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --partition=debug
+#SBATCH --partition=largemem ##debug
 #SBATCH --job-name="P1"
 #SBATCH --output=P1-%j.out
 #SBATCH --error=P1-%j.err
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=32
 ##SBATCH --mem=4800
-#SBATCH --time=00:10:00
-#SBATCH --constraint=IB&CPU-E5645
+#SBATCH --time=00:30:00
+##SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
 #SBATCH --requeue
@@ -19,5 +19,5 @@ module list
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
 srun ../bin/P1P1a.mpi>P1P1a.txt
-
+srun ../bin/P1P3a.mpi>P1P3a.txt
 echo "AND LO!"

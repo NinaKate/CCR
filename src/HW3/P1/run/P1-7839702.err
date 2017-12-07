@@ -1,0 +1,137 @@
+ The Intel compilers are in your path. This is adequate for compiling and running most codes. Source $INTEL/compilers_and_libraries_2017/linux/bin/compilervars.sh for more features. 
+ Intel-MPI is in your path.  This is adequate for compiling and running most codes.  Source the /util/academic/intel/17.0/compilers_and_libraries_2017/linux/mpi/intel64/bin/mpivars.sh file for more features.
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
+
+cpn-k07-23.cbls.ccr.buffalo.edu.45301PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45302PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45303PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45304PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45305PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45306PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45307PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45308PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45309PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45310PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45311PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45312PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45313PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45314PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45315PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45316PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45317PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45318PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45319PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44850PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45320PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44851PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44852PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44853PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44854PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44855PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45321PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44856PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45322PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45324PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45325PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44857PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45326PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44858PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44859PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45323PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45327PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45328PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45329PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45300PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44860PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45330PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44861PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-23.cbls.ccr.buffalo.edu.45331PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44862PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44863PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44864PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44865PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44866PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44867PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44868PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44869PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44870PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44871PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44872PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44873PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44874PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44875PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44876PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44877PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44878PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44879PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44880PSM found 0 available contexts on InfiniPath device(s). (err=21)
+cpn-k07-30.cbls.ccr.buffalo.edu.44849PSM found 0 available contexts on InfiniPath device(s). (err=21)
+[50:cpn-k07-30] unexpected DAPL connection event 0x4006 from 18
+[35:cpn-k07-30] unexpected DAPL connection event 0x4006 from 3
+[37:cpn-k07-30] unexpected DAPL connection event 0x4006 from 5
+[38:cpn-k07-30] unexpected DAPL connection event 0x4006 from 6
+[39:cpn-k07-30] unexpected DAPL connection event 0x4006 from 7
+[48:cpn-k07-30] unexpected DAPL connection event 0x4006 from 16
+[56:cpn-k07-30] unexpected DAPL connection event 0x4006 from 24
+[57:cpn-k07-30] unexpected DAPL connection event 0x4006 from 25
+[1:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[3:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[5:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[6:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[7:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[59:cpn-k07-30] unexpected DAPL connection event 0x4006 from 27
+[33:cpn-k07-30] unexpected DAPL connection event 0x4006 from 1
+[14:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[34:cpn-k07-30] unexpected DAPL connection event 0x4006 from 2
+[16:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[46:cpn-k07-30] unexpected DAPL connection event 0x4006 from 14
+[18:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[53:cpn-k07-30] unexpected DAPL connection event 0x4006 from 21
+[55:cpn-k07-30] unexpected DAPL connection event 0x4006 from 23
+[21:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[61:cpn-k07-30] unexpected DAPL connection event 0x4006 from 29
+[41:cpn-k07-30] unexpected DAPL connection event 0x4006 from 9
+[42:cpn-k07-30] unexpected DAPL connection event 0x4006 from 10
+[24:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[44:cpn-k07-30] unexpected DAPL connection event 0x4006 from 12
+[45:cpn-k07-30] unexpected DAPL connection event 0x4006 from 13
+[25:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[54:cpn-k07-30] unexpected DAPL connection event 0x4006 from 22
+[36:cpn-k07-30] unexpected DAPL connection event 0x4006 from 4
+[27:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[49:cpn-k07-30] unexpected DAPL connection event 0x4006 from 17
+[63:cpn-k07-30] unexpected DAPL connection event 0x4006 from 31
+[29:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[43:cpn-k07-30] unexpected DAPL connection event 0x4006 from 11
+[32:cpn-k07-30] unexpected DAPL connection event 0x4006 from 0
+[31:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[0:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[2:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[4:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[9:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[10:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[12:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[13:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[17:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[22:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[23:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[11:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[30:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[62:cpn-k07-30] unexpected DAPL connection event 0x4006 from 30
+[58:cpn-k07-30] unexpected DAPL connection event 0x4006 from 26
+[40:cpn-k07-30] unexpected DAPL connection event 0x4006 from 8
+[8:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[28:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[15:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[47:cpn-k07-30] unexpected DAPL connection event 0x4006 from 15
+[20:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[26:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[52:cpn-k07-30] unexpected DAPL connection event 0x4006 from 20
+[19:cpn-k07-23][../../src/mpid/ch3/channels/nemesis/netmod/dapl/dapl_conn_rc.c:631] error(0x40000): ofa-v2-qib0-1s: could not accept DAPL connection request: DAT_INTERNAL_ERROR()
+[51:cpn-k07-30] unexpected DAPL connection event 0x4006 from 19
+[60:cpn-k07-30] unexpected DAPL connection event 0x4006 from 28
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 7839702.0 ON cpn-k07-23 CANCELLED AT 2017-12-07T13:13:20 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 7839702 ON cpn-k07-23 CANCELLED AT 2017-12-07T13:13:20 DUE TO TIME LIMIT ***
