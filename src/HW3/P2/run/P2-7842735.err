@@ -4,6 +4,3 @@
 Currently Loaded Modules:
   1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
 
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 7839582 ON cpn-k08-40-01 CANCELLED AT 2017-12-07T12:06:33 ***
-slurmstepd: error: *** STEP 7839582.0 ON cpn-k08-40-01 CANCELLED AT 2017-12-07T12:06:33 ***

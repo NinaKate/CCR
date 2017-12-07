@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --account=hpc1f17
-#SBATCH --partition=largemem ##debug
-#SBATCH --job-name="P1"
-#SBATCH --output=P1-%j.out
-#SBATCH --error=P1-%j.err
+#SBATCH --partition=debug ##largemem ##debug
+#SBATCH --job-name="P2"
+#SBATCH --output=P2-%j.out
+#SBATCH --error=P2-%j.err
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=32
+#SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
 #SBATCH --time=00:30:00
 #SBATCH --constraint=IB
@@ -19,6 +19,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-srun ../bin/P1P1a.mpi>P1P1a.txt
-srun ../bin/P1P3a.mpi>P1P3a.txt
+srun ../bin/P2P1a.mpi>P2P1a.txt
+#srun ../bin/P1P3a.mpi>P1P3a.txt
 echo "AND LO!"

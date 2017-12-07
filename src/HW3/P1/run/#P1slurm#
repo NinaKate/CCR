@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --account=hpc1f17
-#SBATCH --partition=largemem ##debug
+#SBATCH --partition=debug##largemem ##debug
 #SBATCH --job-name="P1"
 #SBATCH --output=P1-%j.out
 #SBATCH --error=P1-%j.err
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=32
+#SBATCH --ntasks-per-node=12
 ##SBATCH --mem=4800
 #SBATCH --time=00:30:00
-#SBATCH --constraint=IB
+#SBATCH --constraint=IB&CPU-E5645
 #SBATCH --mail-user=ninastei@buffalo.edu
 #SBATCH --mail-type=ALL
 #SBATCH --requeue
