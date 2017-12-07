@@ -9,7 +9,7 @@ for i in range(0,len(x)):
     yb[i]=y[0]/y[i]
 
 p1,=plt.plot(x,y)
-p2,=plt.plot(x,yb)
-plt.legend([p1,p2],["Time","Speedup"])
+#p2,=plt.plot(x,yb)
+#plt.legend([p1,p2],["Time","Speedup"])
 plt.title("Time and Speedup as a function of core count")
 plt.show()
