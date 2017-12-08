@@ -3,13 +3,13 @@
 CC=mpicxx -O3
 loc = ../bin/
 
-all: P2P1a.mpi #P2P3a.mpi
+all: P2P1a.mpi P2P3a.mpi
 
 P2P1a.mpi: P2P1a.cpp
 	$(CC) $^ -o $(loc)P2P1a.mpi
 
-#P1P3a.mpi: P1P3a.cpp
-#	$(CC) $^ -o $(loc)P1P3a.mpi
+P2P3a.mpi: P2P3a.cpp
+	$(CC) $^ -o $(loc)P2P3a.mpi
 
 clean:
 	rm -rf  $(loc)*.mpi
