@@ -38,9 +38,7 @@ int main(int argc,char*argv[]){
   for (int j=1;j<size;j++){
     MPI_Barrier(MPI_COMM_WORLD);
     t_start=MPI_Wtime();
-    if (rank==0){n = 100000*j;}
-    MPI_Bcast(&n,1,MPI_INT,0,MPI_COMM_WORLD);
-    MPI_Barrier(MPI_COMM_WORLD);
+    n = 100000*j;
     h = 1.0/(double)n;
     int maxtakes = j*10;
     for (int takes = 0;takes<maxtakes;takes++){

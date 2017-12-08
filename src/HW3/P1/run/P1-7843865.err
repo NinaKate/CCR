@@ -4,6 +4,6 @@
 Currently Loaded Modules:
   1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
 
-slurmstepd: error: *** STEP 7843810.0 ON cpn-f07-09 CANCELLED AT 2017-12-07T21:09:50 DUE TO TIME LIMIT ***
-slurmstepd: error: *** JOB 7843810 ON cpn-f07-09 CANCELLED AT 2017-12-07T21:09:50 DUE TO TIME LIMIT ***
 srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 7843865 ON cpn-f07-09 CANCELLED AT 2017-12-08T08:10:11 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 7843865.0 ON cpn-f07-09 CANCELLED AT 2017-12-08T08:10:11 DUE TO TIME LIMIT ***
