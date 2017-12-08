@@ -57,8 +57,8 @@ int main(int argc,char*argv[]){
    for (int n=1;n<size;n++){
      int maxtakes = 10*n;
      if (rank==0){t_start=MPI_Wtime();}
-     //     for (int takes = 0;takes<maxtakes;takes++){
-    float h = 0.001;
+         for (int takes = 0;takes<maxtakes;takes++){
+    float h = 0.01;
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;
     int Ntot = Nx*Ny;
@@ -92,9 +92,9 @@ int main(int argc,char*argv[]){
     errchk(ierr,func);
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func="MPI_Reduce";
-    errchk(ierr,func);//}
+    errchk(ierr,func);}
     if(rank==0){t_stop=MPI_Wtime();
-      double time = (t_stop-t_start);///(double)maxtakes;
+      double time = (t_stop-t_start)/(double)maxtakes;
       std::cout<<n<<'\t'<<time<<std::endl; }
    }
   MPI_Finalize();
