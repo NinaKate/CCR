@@ -54,7 +54,7 @@ int main(int argc,char*argv[]){
   errchk(ierr,func);
   
   double t_start,t_stop;
-   for (int n=1;n<size;n++){
+   for (int n=58;n<size;n++){
      int maxtakes = 10*n;
      if (rank==0){t_start=MPI_Wtime();}
          for (int takes = 0;takes<maxtakes;takes++){

@@ -55,7 +55,7 @@ int main(int argc,char*argv[]){
   
   double t_start,t_stop;
    for (int n=1;n<size;n++){
-     float h = 0.01/float(n); //scaling with the number of cores
+     float h = 0.05/float(n); //scaling with the number of cores
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;
     int Ntot = Nx*Ny;
@@ -75,7 +75,7 @@ int main(int argc,char*argv[]){
       int yi = i%Ny;
       x = -2 + h*xi;
       y = -1 + h*yi;
-	if (Mandelbrot(x,y,10000)==true){
+	if (Mandelbrot(x,y,1000)==true){
 	  numpts +=1;
 	}
 	

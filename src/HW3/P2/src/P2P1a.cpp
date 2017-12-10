@@ -40,7 +40,7 @@ int main(int argc,char*argv[]){
     t_start=MPI_Wtime();
     //if (rank==0){n = 100000;}
     //MPI_Bcast(&n,1,MPI_INT,0,MPI_COMM_WORLD);
-    int maxtakes = j*10;
+    int maxtakes = j*1000;
     for (int takes = 0;takes<maxtakes;takes++){
       sum =0.0;
       if (rank<j){

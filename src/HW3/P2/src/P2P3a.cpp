@@ -40,7 +40,7 @@ int main(int argc,char*argv[]){
     t_start=MPI_Wtime();
     n = 100000*j;
     h = 1.0/(double)n;
-    int maxtakes = j*10;
+    int maxtakes = j*1000;
     for (int takes = 0;takes<maxtakes;takes++){
       sum =0.0;
       if (rank<j){
