@@ -55,10 +55,12 @@ int main(int argc,char*argv[]){
   
   double t_start,t_stop;
    for (int n=1;n<size;n++){
-     float h = 0.05/float(n); //scaling with the number of cores
+     int Nperproc = 80000; //this is me saying I want 80k grid points per processor
+     int Ntot = Nperproc*n; //and now I establish the total number of grid points
+     float h = pow(8.0/(float)Ntot,0.5); //backing out h
     int Nx = 4/h; //number of grid points across the x axis
     int Ny = 2/h;
-    int Ntot = Nx*Ny;
+    //if (rank ==0){std::cout<<"My grid spacing is "<<h<<" for "<<n<<" processors, which gives me "<<Ntot<<" grid points and "<<Nperproc<<" points per processor."<<std::endl;}
     int numpts = 0;
     ierr=MPI_Barrier(MPI_COMM_WORLD);
     func = "MPI_Barrier";
@@ -75,7 +77,7 @@ int main(int argc,char*argv[]){
       int yi = i%Ny;
       x = -2 + h*xi;
       y = -1 + h*yi;
-	if (Mandelbrot(x,y,1000)==true){
+	if (Mandelbrot(x,y,10000)==true){
 	  numpts +=1;
 	}
 	
@@ -90,8 +92,11 @@ int main(int argc,char*argv[]){
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
     func="MPI_Reduce";
     errchk(ierr,func);
+    
     if(rank==0){t_stop=MPI_Wtime();
- std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl; }
+ std::cout<<n<<'\t'<<(t_stop-t_start)<<std::endl;
+ if (area<0){std::cout<<"ABORT! ABORT! ERROR!"<<std::endl;}//just doing a check to force it to actually calculate this
+    }
    }
   MPI_Finalize();
   return(0);

@@ -54,40 +54,33 @@ int main(int argc,char*argv[]){
   errchk(ierr,func);
   
   double t_start,t_stop;
-   for (int n=58;n<size;n++){
-     int maxtakes = 10*n;
+  for (int n=1;n<(size+1);n++){
+    int maxtakes = n*n;//this is so that I can avoid rounding errors by increasing the number of iterations based on the number of processors--so for 1 processor, it runs once, for 2 processors, it runs 4 times, etc. 
      if (rank==0){t_start=MPI_Wtime();}
          for (int takes = 0;takes<maxtakes;takes++){
-    float h = 0.01;
-    int Nx = 4/h; //number of grid points across the x axis
-    int Ny = 2/h;
-    int Ntot = Nx*Ny;
-    int numpts = 0;
-    ierr=MPI_Barrier(MPI_COMM_WORLD);
-    func = "MPI_Barrier";
-    errchk(ierr,func);
-    //if (rank==0){t_start=MPI_Wtime();}
-    ierr=MPI_Barrier(MPI_COMM_WORLD);
-    func = "MPI_Barrier";
-    errchk(ierr,func);
-    if (rank<n){
-    float x=-2;
-    float y=-1;
-    for (int i=rank; i<Ntot;i+=n){
-      int xi = int(i/Ny);
-      int yi = i%Ny;
-      x = -2 + h*xi;
-      y = -1 + h*yi;
-	if (Mandelbrot(x,y,10000)==true){
-	  numpts +=1;
-	}
-	
-      }
+	   float h = 0.01;//I could go finer, but it would take ages. Why bother, if I can get a good result at this scale?
+	   int Nx = 4/h; //number of grid points across the x axis
+	   int Ny = 2/h;
+	   int Ntot = Nx*Ny;
+	   int numpts = 0;
+	   ierr=MPI_Barrier(MPI_COMM_WORLD);
+	   func = "MPI_Barrier";
+	   errchk(ierr,func);
+	   if (rank<n){
+	     float x=-2;
+	     float y=-1;
+	     for (int i=rank; i<Ntot;i+=n){
+	       int xi = int(i/Ny);
+	       int yi = i%Ny;
+	       x = -2 + h*xi;
+	       y = -1 + h*yi;
+	       if (Mandelbrot(x,y,10000)==true){numpts +=1;}
+	     }
      
-    }
+	   }
     float myarea = numpts*h*h;
     float area = 0;
-    ierr=MPI_Barrier(MPI_COMM_WORLD);
+    ierr=MPI_Barrier(MPI_COMM_WORLD);//just to make sure we don't start the reduce until everyone is done
     func = "MPI_Barrier";
     errchk(ierr,func);
     ierr = MPI_Reduce(&myarea,&area,1,MPI_FLOAT,MPI_SUM,0,MPI_COMM_WORLD);
