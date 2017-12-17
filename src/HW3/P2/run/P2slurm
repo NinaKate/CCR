@@ -19,6 +19,6 @@ module list
 
 export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
 
-#srun ../bin/P2P1a.mpi>P2P1a.txt
-srun ../bin/P2P3a.mpi>P2P3A.txt
+srun ../bin/P2P1a.mpi>P2P1a.txt
+srun ../bin/P2P3a.mpi>P2P3a.txt
 echo "AND LO!"

@@ -1,0 +1,198 @@
+ The Intel compilers are in your path. This is adequate for compiling and running most codes. Source $INTEL/compilers_and_libraries_2017/linux/bin/compilervars.sh for more features. 
+ Intel-MPI is in your path.  This is adequate for compiling and running most codes.  Source the /util/academic/intel/17.0/compilers_and_libraries_2017/linux/mpi/intel64/bin/mpivars.sh file for more features.
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) intel/17.0   4) intel-mpi/2017.0.1
+
+slurmstepd: error: task/cgroup: unable to add task[pid=28303] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28304] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28305] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28306] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28307] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28308] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28309] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28310] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28311] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28312] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28313] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28314] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28315] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28316] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28317] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28318] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28319] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28320] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28321] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28322] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28323] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28324] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28325] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28326] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28327] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28328] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28329] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28330] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28331] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28332] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28333] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=28334] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58478] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58479] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58480] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58481] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58482] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58483] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58484] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58485] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58486] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58487] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58488] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58489] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58490] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58491] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58492] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58493] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58494] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58495] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58496] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58497] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58498] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58499] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58500] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58501] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58502] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58503] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58504] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58505] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58506] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58507] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58508] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
+slurmstepd: error: task/cgroup: unable to add task[pid=58509] to memory cg '(null)'
+slurmstepd: error: xcgroup_instantiate: unable to create cgroup '/sys/fs/cgroup/memory/slurm/uid_380684' : No space left on device
+slurmstepd: error: jobacct_gather/cgroup: unable to instanciate user 380684 memory cgroup
