@@ -1,0 +1,6 @@
+ndim int 2
+component_type str gcib
+nrename int 5
+ndef int 4
+lmax int 2508
+lmin int 30

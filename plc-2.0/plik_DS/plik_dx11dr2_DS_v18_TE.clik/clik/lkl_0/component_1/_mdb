@@ -1,0 +1,6 @@
+ndim int 7
+component_type str powerlaw_free_emissivity_TE
+nrename int 10
+ndef int 4
+lmax int 1996
+lmin int 30

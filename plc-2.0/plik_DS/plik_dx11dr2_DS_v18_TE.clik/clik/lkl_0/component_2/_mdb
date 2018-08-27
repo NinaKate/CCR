@@ -1,0 +1,6 @@
+ndim int 30
+component_type str bleak
+nrename int 1
+ndef int 1
+lmax int 1996
+lmin int 30

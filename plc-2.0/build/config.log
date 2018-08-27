@@ -1,4 +1,4 @@
-# project  configured on Mon Aug 27 10:17:53 2018 by
+# project  configured on Mon Aug 27 13:01:10 2018 by
 # waf 1.8.8 (abi 98, python 20705f0 on linux2)
 # using ./waf configure --lapack_mkl= --install_all_deps
 #
@@ -11,11 +11,11 @@ Setting out to
 ----------------------------------------
 Checking for program 'gcc, cc'
 /usr/bin/gcc
-find program=['gcc', 'cc'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='CC' -> ['/usr/bin/gcc']
 ----------------------------------------
 Checking for program 'ar'
 /usr/bin/ar
-find program=['ar'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='AR' -> ['/usr/bin/ar']
 ----------------------------------------
 Check gcc version
 4.8.5
@@ -26,12 +26,12 @@ Compile a test code with gcc
 main() {fprintf(stderr,"hello world");}
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_da6ef84b72cab2c567d623b0c259f82a/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_cba59787eff194e139085eaa970ec10e/test.c[0m
 
-['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_da6ef84b72cab2c567d623b0c259f82a/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_da6ef84b72cab2c567d623b0c259f82a/testbuild/testprog[0m
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_cba59787eff194e139085eaa970ec10e/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_cba59787eff194e139085eaa970ec10e/testbuild/testprog[0m
 
-['/usr/bin/gcc', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_da6ef84b72cab2c567d623b0c259f82a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_cba59787eff194e139085eaa970ec10e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ----------------------------------------
 Setting architecture flag to
@@ -47,9 +47,9 @@ Checking for $CC option to support OpenMP
 int main () { return omp_get_num_threads (); }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_adfd06af5922b9cae2924f528d756e1f/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_f2da877197768e9019f04b4c7d7f5643/test.c[0m
 
-['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_adfd06af5922b9cae2924f528d756e1f/testbuild/test.c.1.o']
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2da877197768e9019f04b4c7d7f5643/testbuild/test.c.1.o']
 err: ../test.c:3:2: error: unknown type name ‘choke’
   choke me
   ^
@@ -65,8 +65,8 @@ from /user/ninastei/CCR/plc-2.0: Test does not build: Traceback (most recent cal
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 139801391214480: c test.c -> test.c.1.o}
-['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_adfd06af5922b9cae2924f528d756e1f/testbuild/test.c.1.o']
+	{task 140272147873872: c test.c -> test.c.1.o}
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2da877197768e9019f04b4c7d7f5643/testbuild/test.c.1.o']
 
 ==>
 
@@ -77,22 +77,22 @@ BuildError: Build failed
 int main () { return omp_get_num_threads (); }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0faf4d63ea50bb758101d5995367d8aa/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_0096fb7069b4aab87617bb4faa6a3ebb/test.c[0m
 
-['/usr/bin/gcc', '-fopenmp', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0faf4d63ea50bb758101d5995367d8aa/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_0faf4d63ea50bb758101d5995367d8aa/testbuild/testprog[0m
+['/usr/bin/gcc', '-fopenmp', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0096fb7069b4aab87617bb4faa6a3ebb/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_0096fb7069b4aab87617bb4faa6a3ebb/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', '-fopenmp', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0faf4d63ea50bb758101d5995367d8aa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/gcc', '-m64', '-fopenmp', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0096fb7069b4aab87617bb4faa6a3ebb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 -fopenmp
 -----------------------------------------
 Checking for program 'ifort'
 not found
-find program=['ifort'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='FC' -> None
+find program=['ifort'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='FC' -> None
 from /user/ninastei/CCR/plc-2.0: Could not find the program ['ifort']
 -----------------------------------------
 Checking for program 'gfortran, g77'
 /usr/bin/gfortran
-find program=['gfortran', 'g77'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='FC' -> ['/usr/bin/gfortran']
+find program=['gfortran', 'g77'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='FC' -> ['/usr/bin/gfortran']
 (tool ar is already loaded, skipping)
 -----------------------------------------
 Check gfortran version
@@ -105,12 +105,12 @@ program test
  end program test
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c338236aff6184e9e3856d5ff8225758/test.f90[0m
+[1/2] Compiling [32mbuild/.conf_check_1e6f3e3759fc680f8b5484f1c74ba2ec/test.f90[0m
 
-['/usr/bin/gfortran', '-DGFORTRAN', '-ffixed-line-length-0', '-ffree-line-length-0', '-m64', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c338236aff6184e9e3856d5ff8225758/testbuild/test.f90.1.o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c338236aff6184e9e3856d5ff8225758/test.f90']
-[2/2] Linking [33mbuild/.conf_check_c338236aff6184e9e3856d5ff8225758/testbuild/testprog[0m
+['/usr/bin/gfortran', '-DGFORTRAN', '-ffixed-line-length-0', '-ffree-line-length-0', '-m64', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1e6f3e3759fc680f8b5484f1c74ba2ec/testbuild/test.f90.1.o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1e6f3e3759fc680f8b5484f1c74ba2ec/test.f90']
+[2/2] Linking [33mbuild/.conf_check_1e6f3e3759fc680f8b5484f1c74ba2ec/testbuild/testprog[0m
 
-['/usr/bin/gfortran', '-m64', 'test.f90.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c338236aff6184e9e3856d5ff8225758/testbuild/testprog', '-m64']
+['/usr/bin/gfortran', '-m64', 'test.f90.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1e6f3e3759fc680f8b5484f1c74ba2ec/testbuild/testprog', '-m64']
 yes
 -----------------------------------------
 retrieve gfortran link line
@@ -133,7 +133,7 @@ Setting install include directory to
 -----------------------------------------
 Checking for program 'python'
 /usr/bin/python
-find program=['python'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='PYTHON' -> ['/usr/bin/python']
+find program=['python'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='PYTHON' -> ['/usr/bin/python']
 ['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
 err: Traceback (most recent call last):
   File "<string>", line 1, in <module>
@@ -205,7 +205,7 @@ LDVERSION = ''
 -----------------------------------------
 python-config
 /usr/bin/python-config
-find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
 ------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags' flags
 ['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
@@ -236,12 +236,12 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_664c304fc2ef0c7b4612eef5974acf96/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_735fd52ba11461d8a9b9bce22a62c1cb/test.c[0m
 
-['/usr/bin/gcc', '-fno-strict-aliasing', '-fexceptions', '-fstack-protector-strong', '-m64', '-mtune=generic', '-fPIC', '-fwrapv', '-fexceptions', '-fstack-protector-strong', '-m64', '-mtune=generic', '-fPIC', '-fwrapv', '-I/usr/include/python2.7', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-D_GNU_SOURCE', '-DNDEBUG', '-D_GNU_SOURCE', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_664c304fc2ef0c7b4612eef5974acf96/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_664c304fc2ef0c7b4612eef5974acf96/testbuild/testprog[0m
+['/usr/bin/gcc', '-fno-strict-aliasing', '-fexceptions', '-fstack-protector-strong', '-m64', '-mtune=generic', '-fPIC', '-fwrapv', '-fexceptions', '-fstack-protector-strong', '-m64', '-mtune=generic', '-fPIC', '-fwrapv', '-I/usr/include/python2.7', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-D_GNU_SOURCE', '-DNDEBUG', '-D_GNU_SOURCE', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_735fd52ba11461d8a9b9bce22a62c1cb/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_735fd52ba11461d8a9b9bce22a62c1cb/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', '-Xlinker', '-export-dynamic', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_664c304fc2ef0c7b4612eef5974acf96/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib64', '-lm', '-ldl', '-lutil', '-lpthread', '-lpython2.7']
+['/usr/bin/gcc', '-m64', '-Xlinker', '-export-dynamic', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_735fd52ba11461d8a9b9bce22a62c1cb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib64', '-lm', '-ldl', '-lutil', '-lpthread', '-lpython2.7']
 yes
 ------------------------------------------------------------------
 Checking for library dl
@@ -253,12 +253,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_274f46905897131811bfc69530d38030/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_7f68586e3fbfd6bcf881231676294be0/test.c[0m
 
-['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_274f46905897131811bfc69530d38030/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_274f46905897131811bfc69530d38030/testbuild/testprog[0m
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_7f68586e3fbfd6bcf881231676294be0/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_7f68586e3fbfd6bcf881231676294be0/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_274f46905897131811bfc69530d38030/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-ldl']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_7f68586e3fbfd6bcf881231676294be0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-ldl']
 yes
 ------------------------------------------------------------------
 checking for RTLD_DEFAULT in dl
@@ -266,9 +266,9 @@ checking for RTLD_DEFAULT in dl
 #include <dlfcn.h> 
 int main() {void* tt = RTLD_DEFAULT;}
 <==
-[1/2] Compiling [32mbuild/.conf_check_773b30e769eab169b0d8211a8fc495c4/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_ed8b9a881c91e6ecec5a3bf0985a59a1/test.c[0m
 
-['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_773b30e769eab169b0d8211a8fc495c4/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ed8b9a881c91e6ecec5a3bf0985a59a1/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:2:24: error: ‘RTLD_DEFAULT’ undeclared (first use in this function)
  int main() {void* tt = RTLD_DEFAULT;}
@@ -282,8 +282,8 @@ from /user/ninastei/CCR/plc-2.0: Test does not build: Traceback (most recent cal
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 139801323195664: c test.c -> test.c.1.o}
-['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_773b30e769eab169b0d8211a8fc495c4/testbuild/test.c.1.o']
+	{task 140271559642448: c test.c -> test.c.1.o}
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ed8b9a881c91e6ecec5a3bf0985a59a1/testbuild/test.c.1.o']
 
 no
 from /user/ninastei/CCR/plc-2.0: The configuration failed
@@ -302,12 +302,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1ca2f76ae2fb8590547304e9e3e00f9e/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_6e41b3394afb573ac271c40212ad4799/test.c[0m
 
-['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_PMC', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1ca2f76ae2fb8590547304e9e3e00f9e/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_1ca2f76ae2fb8590547304e9e3e00f9e/testbuild/testprog[0m
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_PMC', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_6e41b3394afb573ac271c40212ad4799/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_6e41b3394afb573ac271c40212ad4799/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1ca2f76ae2fb8590547304e9e3e00f9e/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_6e41b3394afb573ac271c40212ad4799/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
 err: /usr/bin/ld: cannot find -lpmc
 collect2: error: ld returned 1 exit status
 
@@ -318,8 +318,8 @@ from /user/ninastei/CCR/plc-2.0: Test does not build: Traceback (most recent cal
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 139801323291856: cprogram test.c.1.o -> testprog}
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1ca2f76ae2fb8590547304e9e3e00f9e/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
+	{task 140271559734544: cprogram test.c.1.o -> testprog}
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_6e41b3394afb573ac271c40212ad4799/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
 
 not found
 from /user/ninastei/CCR/plc-2.0: The configuration failed
@@ -333,12 +333,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_35b0e865a09d3c322e3e2cd225c208cd/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_0b32eb847c790d61fc2ce2082f71d7f2/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_35b0e865a09d3c322e3e2cd225c208cd/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_35b0e865a09d3c322e3e2cd225c208cd/testbuild/testprog[0m
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0b32eb847c790d61fc2ce2082f71d7f2/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_0b32eb847c790d61fc2ce2082f71d7f2/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_35b0e865a09d3c322e3e2cd225c208cd/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_0b32eb847c790d61fc2ce2082f71d7f2/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dposv
@@ -353,17 +353,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e459d93169568438edbb0bee8a796348/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_4b696ea361c13d611f068fd17e12b694/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_e459d93169568438edbb0bee8a796348/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_4b696ea361c13d611f068fd17e12b694/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_e459d93169568438edbb0bee8a796348/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_4b696ea361c13d611f068fd17e12b694/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_e459d93169568438edbb0bee8a796348/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_4b696ea361c13d611f068fd17e12b694/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dtrsv
@@ -378,17 +378,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_887d4d01d4911d05bb5393229fcebb4a/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_824503023490c52821c56cd767d4530e/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_887d4d01d4911d05bb5393229fcebb4a/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_824503023490c52821c56cd767d4530e/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_887d4d01d4911d05bb5393229fcebb4a/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_824503023490c52821c56cd767d4530e/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_887d4d01d4911d05bb5393229fcebb4a/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_824503023490c52821c56cd767d4530e/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dpotrf
@@ -403,17 +403,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3ffa162fc3cd5a32315830ae11230832/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_f1668cdc5df2f1913535c5d6f6854850/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3ffa162fc3cd5a32315830ae11230832/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f1668cdc5df2f1913535c5d6f6854850/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_3ffa162fc3cd5a32315830ae11230832/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_f1668cdc5df2f1913535c5d6f6854850/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3ffa162fc3cd5a32315830ae11230832/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f1668cdc5df2f1913535c5d6f6854850/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dpotrs
@@ -428,17 +428,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_63bce7552cd385a424f15b613630ab1d/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_71a4a5ca94f008d5217b3145835ead2c/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_63bce7552cd385a424f15b613630ab1d/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_71a4a5ca94f008d5217b3145835ead2c/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_63bce7552cd385a424f15b613630ab1d/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_71a4a5ca94f008d5217b3145835ead2c/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_63bce7552cd385a424f15b613630ab1d/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_71a4a5ca94f008d5217b3145835ead2c/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dpotri
@@ -453,17 +453,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c27a980c59a6908afe653d4a404cd660/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_fa6fad3ace53e6aa422ee6c27533599d/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c27a980c59a6908afe653d4a404cd660/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_fa6fad3ace53e6aa422ee6c27533599d/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_c27a980c59a6908afe653d4a404cd660/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_fa6fad3ace53e6aa422ee6c27533599d/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c27a980c59a6908afe653d4a404cd660/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_fa6fad3ace53e6aa422ee6c27533599d/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dtrtri
@@ -478,17 +478,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_851553ec13d50902decc8aeb09dbee41/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_5bc84aed71b16b348d5ef222db4442c2/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_851553ec13d50902decc8aeb09dbee41/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_5bc84aed71b16b348d5ef222db4442c2/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_851553ec13d50902decc8aeb09dbee41/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_5bc84aed71b16b348d5ef222db4442c2/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_851553ec13d50902decc8aeb09dbee41/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_5bc84aed71b16b348d5ef222db4442c2/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dtrmm
@@ -503,17 +503,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_742f331415fdb80c4cea09d952f2f9c5/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_50bee49bdc23f0b2f097c8e87a0374b6/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_742f331415fdb80c4cea09d952f2f9c5/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_50bee49bdc23f0b2f097c8e87a0374b6/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_742f331415fdb80c4cea09d952f2f9c5/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_50bee49bdc23f0b2f097c8e87a0374b6/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_742f331415fdb80c4cea09d952f2f9c5/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_50bee49bdc23f0b2f097c8e87a0374b6/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dtrmv
@@ -528,17 +528,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ae9c1acea396b1f7357b9c3555bca226/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_d8a6943bb6ea5c1425c3a9f543e8c788/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ae9c1acea396b1f7357b9c3555bca226/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d8a6943bb6ea5c1425c3a9f543e8c788/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_ae9c1acea396b1f7357b9c3555bca226/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_d8a6943bb6ea5c1425c3a9f543e8c788/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ae9c1acea396b1f7357b9c3555bca226/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d8a6943bb6ea5c1425c3a9f543e8c788/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dgeqrf
@@ -553,17 +553,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f2a55afee4b5eb878891345e96d69316/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_85f1c387255b65ffc29bfda057637bfc/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2a55afee4b5eb878891345e96d69316/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_85f1c387255b65ffc29bfda057637bfc/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_f2a55afee4b5eb878891345e96d69316/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_85f1c387255b65ffc29bfda057637bfc/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2a55afee4b5eb878891345e96d69316/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_85f1c387255b65ffc29bfda057637bfc/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dormqr
@@ -578,17 +578,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c8c98ab7e6e0b6a901410a2265f589cb/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_32296aebe08b0ff773bf2356d6c10b41/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c8c98ab7e6e0b6a901410a2265f589cb/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_32296aebe08b0ff773bf2356d6c10b41/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_c8c98ab7e6e0b6a901410a2265f589cb/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_32296aebe08b0ff773bf2356d6c10b41/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c8c98ab7e6e0b6a901410a2265f589cb/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_32296aebe08b0ff773bf2356d6c10b41/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyev
@@ -603,17 +603,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ad933d761cc941d5f7b13f2720a702c4/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_5ddc2724bea235e45eac9aec756a4ab2/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ad933d761cc941d5f7b13f2720a702c4/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_5ddc2724bea235e45eac9aec756a4ab2/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_ad933d761cc941d5f7b13f2720a702c4/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_5ddc2724bea235e45eac9aec756a4ab2/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_ad933d761cc941d5f7b13f2720a702c4/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_5ddc2724bea235e45eac9aec756a4ab2/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dgesvd
@@ -628,17 +628,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_aa61eae136a60a7eff6bbed797bc0a69/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_e58e68e641dbab96169e3cbf1e0621f4/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_aa61eae136a60a7eff6bbed797bc0a69/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_e58e68e641dbab96169e3cbf1e0621f4/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_aa61eae136a60a7eff6bbed797bc0a69/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_e58e68e641dbab96169e3cbf1e0621f4/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_aa61eae136a60a7eff6bbed797bc0a69/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_e58e68e641dbab96169e3cbf1e0621f4/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsymv
@@ -653,17 +653,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3b9a5b610dfa12b59c447ecbb2ba9eb6/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_7033ef3d8ae092f7a88247e632c51a84/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3b9a5b610dfa12b59c447ecbb2ba9eb6/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_7033ef3d8ae092f7a88247e632c51a84/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_3b9a5b610dfa12b59c447ecbb2ba9eb6/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_7033ef3d8ae092f7a88247e632c51a84/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3b9a5b610dfa12b59c447ecbb2ba9eb6/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_7033ef3d8ae092f7a88247e632c51a84/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dgemv
@@ -678,17 +678,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_911145f8f7141c20c5ab7311d1372080/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_d4e7107f578a9202715e673d03183158/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_911145f8f7141c20c5ab7311d1372080/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d4e7107f578a9202715e673d03183158/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_911145f8f7141c20c5ab7311d1372080/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_d4e7107f578a9202715e673d03183158/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_911145f8f7141c20c5ab7311d1372080/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d4e7107f578a9202715e673d03183158/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dgemm
@@ -703,17 +703,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_213dfa898e7e545d4aafa0d44480f272/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_d1deec1d0c02a48ca5575632a587f2bd/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_213dfa898e7e545d4aafa0d44480f272/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d1deec1d0c02a48ca5575632a587f2bd/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_213dfa898e7e545d4aafa0d44480f272/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_d1deec1d0c02a48ca5575632a587f2bd/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_213dfa898e7e545d4aafa0d44480f272/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d1deec1d0c02a48ca5575632a587f2bd/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyrk
@@ -728,17 +728,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_efc7b81286445f222a273c9e2a936da0/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_dcfa280eea02e443a4a55528807bdd7d/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_efc7b81286445f222a273c9e2a936da0/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_dcfa280eea02e443a4a55528807bdd7d/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_efc7b81286445f222a273c9e2a936da0/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_dcfa280eea02e443a4a55528807bdd7d/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_efc7b81286445f222a273c9e2a936da0/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_dcfa280eea02e443a4a55528807bdd7d/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyr2k
@@ -753,17 +753,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_95d2c137937cf4b484e0247f558d04a1/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_bda3b9bd18e68d8efe246a328f851f12/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_95d2c137937cf4b484e0247f558d04a1/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_bda3b9bd18e68d8efe246a328f851f12/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_95d2c137937cf4b484e0247f558d04a1/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_bda3b9bd18e68d8efe246a328f851f12/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_95d2c137937cf4b484e0247f558d04a1/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_bda3b9bd18e68d8efe246a328f851f12/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function daxpy
@@ -778,17 +778,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_8f0d4b81891e1246a7dca3b412e3bdbb/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_3c017c31c856584ef9910445dc0ca3c8/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_8f0d4b81891e1246a7dca3b412e3bdbb/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3c017c31c856584ef9910445dc0ca3c8/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_8f0d4b81891e1246a7dca3b412e3bdbb/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_3c017c31c856584ef9910445dc0ca3c8/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_8f0d4b81891e1246a7dca3b412e3bdbb/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3c017c31c856584ef9910445dc0ca3c8/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dtrsm
@@ -803,17 +803,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_68d87f75a437f68a3b04cc73b7fde934/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_204c5fa29f941e831539750f222326d0/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_68d87f75a437f68a3b04cc73b7fde934/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_204c5fa29f941e831539750f222326d0/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_68d87f75a437f68a3b04cc73b7fde934/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_204c5fa29f941e831539750f222326d0/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_68d87f75a437f68a3b04cc73b7fde934/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_204c5fa29f941e831539750f222326d0/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsymm
@@ -828,17 +828,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_78ff7a1c5609336c67ce6e9341255935/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_f031ae5032a34829647161c280001d54/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_78ff7a1c5609336c67ce6e9341255935/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f031ae5032a34829647161c280001d54/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_78ff7a1c5609336c67ce6e9341255935/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_f031ae5032a34829647161c280001d54/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_78ff7a1c5609336c67ce6e9341255935/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f031ae5032a34829647161c280001d54/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyr
@@ -853,17 +853,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d411e2d9cd682e7aed0a1ad76fa50b68/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_838b36be481ebacbc2da1e3169507e1c/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d411e2d9cd682e7aed0a1ad76fa50b68/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_838b36be481ebacbc2da1e3169507e1c/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_d411e2d9cd682e7aed0a1ad76fa50b68/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_838b36be481ebacbc2da1e3169507e1c/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d411e2d9cd682e7aed0a1ad76fa50b68/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_838b36be481ebacbc2da1e3169507e1c/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function ddot
@@ -878,17 +878,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_8d6858762dfdec16f3bc19ca1079d022/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_c0607023ce5660c3901d7896e45d0a14/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_8d6858762dfdec16f3bc19ca1079d022/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c0607023ce5660c3901d7896e45d0a14/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_8d6858762dfdec16f3bc19ca1079d022/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_c0607023ce5660c3901d7896e45d0a14/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_8d6858762dfdec16f3bc19ca1079d022/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c0607023ce5660c3901d7896e45d0a14/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyevd
@@ -903,17 +903,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1f8edb8e696dd6ec560c54d732b105bd/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_d4ea03b65990097a5b4071b01f24590e/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1f8edb8e696dd6ec560c54d732b105bd/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d4ea03b65990097a5b4071b01f24590e/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_1f8edb8e696dd6ec560c54d732b105bd/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_d4ea03b65990097a5b4071b01f24590e/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_1f8edb8e696dd6ec560c54d732b105bd/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_d4ea03b65990097a5b4071b01f24590e/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dlamch
@@ -928,17 +928,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_77fa11b229435f8d90629956cf6fe6a0/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_3575d151feb29ec1ac0dc8c2eb3dd253/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_77fa11b229435f8d90629956cf6fe6a0/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3575d151feb29ec1ac0dc8c2eb3dd253/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_77fa11b229435f8d90629956cf6fe6a0/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_3575d151feb29ec1ac0dc8c2eb3dd253/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_77fa11b229435f8d90629956cf6fe6a0/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_3575d151feb29ec1ac0dc8c2eb3dd253/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for function dsyevr
@@ -953,17 +953,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cc692912dbe1d958050bca6183de3ac4/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_bd38996d9638d0f7c36c51146e6e39eb/test.c[0m
 
-['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_cc692912dbe1d958050bca6183de3ac4/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_LAPACK', '-DLAPACK_CLIK', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_bd38996d9638d0f7c36c51146e6e39eb/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_cc692912dbe1d958050bca6183de3ac4/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_bd38996d9638d0f7c36c51146e6e39eb/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_cc692912dbe1d958050bca6183de3ac4/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_bd38996d9638d0f7c36c51146e6e39eb/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-llapack', '-lblas']
 yes
 ------------------------------------------------------------------
 Checking for library ['cfitsio']
@@ -975,12 +975,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f2d0946e26632f1cd8e32f1a2f01b80e/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_c0aeed1b64389f774e9fb39c93a144ae/test.c[0m
 
-['/usr/bin/gcc', '-fPIC', '-shared', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2d0946e26632f1cd8e32f1a2f01b80e/testbuild/test.c.1.o']
-[2/2] Linking [33mbuild/.conf_check_f2d0946e26632f1cd8e32f1a2f01b80e/testbuild/testprog[0m
+['/usr/bin/gcc', '-fPIC', '-shared', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c0aeed1b64389f774e9fb39c93a144ae/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_c0aeed1b64389f774e9fb39c93a144ae/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', '-shared', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_f2d0946e26632f1cd8e32f1a2f01b80e/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/user/ninastei/CCR/plc-2.0/lib', '-lcfitsio']
+['/usr/bin/gcc', '-m64', '-shared', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c0aeed1b64389f774e9fb39c93a144ae/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/user/ninastei/CCR/plc-2.0/lib', '-lcfitsio']
 yes
 ------------------------------------------------------------------
 Checking for function fits_init_cfitsio
@@ -995,17 +995,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c58e9da083990fc3c6a477f3f1422e77/test.c[0m
+[1/2] Compiling [32mbuild/.conf_check_6ba2f586d1937ad59861ca63fdd6d185/test.c[0m
 
-['/usr/bin/gcc', '-fPIC', '-shared', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c58e9da083990fc3c6a477f3f1422e77/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fPIC', '-shared', '-I/user/ninastei/CCR/plc-2.0/include', '-DPYTHONDIR="/usr/lib/python2.7/site-packages"', '-DPYTHONARCHDIR="/usr/lib64/python2.7/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_6ba2f586d1937ad59861ca63fdd6d185/testbuild/test.c.1.o']
 err: ../test.c: In function ‘main’:
 ../test.c:7:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
   return (int)p;
          ^
 
-[2/2] Linking [33mbuild/.conf_check_c58e9da083990fc3c6a477f3f1422e77/testbuild/testprog[0m
+[2/2] Linking [33mbuild/.conf_check_6ba2f586d1937ad59861ca63fdd6d185/testbuild/testprog[0m
 
-['/usr/bin/gcc', '-m64', '-shared', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_c58e9da083990fc3c6a477f3f1422e77/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/user/ninastei/CCR/plc-2.0/lib', '-lcfitsio']
+['/usr/bin/gcc', '-m64', '-shared', 'test.c.1.o', '-o', '/user/ninastei/CCR/plc-2.0/build/.conf_check_6ba2f586d1937ad59861ca63fdd6d185/testbuild/testprog', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/user/ninastei/CCR/plc-2.0/lib', '-lcfitsio']
 yes
 (tool python is already loaded, skipping)
 ------------------------------------------------------------------
@@ -1018,633 +1018,17 @@ ok
 (tool python is already loaded, skipping)
 ------------------------------------------------------------------
 Checking python module 'cython'
-not found
-cd build//;tar -zxf Cython-0.14.1.tar.gz
-cd build/Cython-0.14.1; PYTHONPATH=/user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages:$PYTHONPATH /usr/bin/python setup.py build_ext -L=/usr/lib64 ;PYTHONPATH=/user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages:$PYTHONPATH /usr/bin/python setup.py install --install-lib=/user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages --install-scripts=/user/ninastei/CCR/plc-2.0/bin
-out: running build_ext
-building 'Cython.Plex.Scanners' extension
-creating build
-creating build/temp.linux-x86_64-2.7
-creating build/temp.linux-x86_64-2.7/Cython
-creating build/temp.linux-x86_64-2.7/Cython/Plex
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Plex/Scanners.c -o build/temp.linux-x86_64-2.7/Cython/Plex/Scanners.o
-creating build/lib.linux-x86_64-2.7
-creating build/lib.linux-x86_64-2.7/Cython
-creating build/lib.linux-x86_64-2.7/Cython/Plex
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Plex/Scanners.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Plex/Scanners.so
-building 'Cython.Plex.Actions' extension
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Plex/Actions.c -o build/temp.linux-x86_64-2.7/Cython/Plex/Actions.o
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Plex/Actions.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Plex/Actions.so
-building 'Cython.Compiler.Lexicon' extension
-creating build/temp.linux-x86_64-2.7/Cython/Compiler
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Compiler/Lexicon.c -o build/temp.linux-x86_64-2.7/Cython/Compiler/Lexicon.o
-creating build/lib.linux-x86_64-2.7/Cython/Compiler
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Compiler/Lexicon.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Compiler/Lexicon.so
-building 'Cython.Compiler.Scanning' extension
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Compiler/Scanning.c -o build/temp.linux-x86_64-2.7/Cython/Compiler/Scanning.o
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Compiler/Scanning.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Compiler/Scanning.so
-building 'Cython.Compiler.Parsing' extension
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Compiler/Parsing.c -o build/temp.linux-x86_64-2.7/Cython/Compiler/Parsing.o
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Compiler/Parsing.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Compiler/Parsing.so
-building 'Cython.Compiler.Visitor' extension
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Compiler/Visitor.c -o build/temp.linux-x86_64-2.7/Cython/Compiler/Visitor.o
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Compiler/Visitor.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Compiler/Visitor.so
-building 'Cython.Compiler.Code' extension
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Compiler/Code.c -o build/temp.linux-x86_64-2.7/Cython/Compiler/Code.o
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Compiler/Code.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Compiler/Code.so
-building 'Cython.Runtime.refnanny' extension
-creating build/temp.linux-x86_64-2.7/Cython/Runtime
-gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.7 -c Cython/Runtime/refnanny.c -o build/temp.linux-x86_64-2.7/Cython/Runtime/refnanny.o
-creating build/lib.linux-x86_64-2.7/Cython/Runtime
-gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/Cython/Runtime/refnanny.o -L=/usr/lib64 -L/usr/lib64 -lpython2.7 -o build/lib.linux-x86_64-2.7/Cython/Runtime/refnanny.so
-running install
-running build
-running build_py
-creating build/lib.linux-x86_64-2.7/pyximport
-copying pyximport/__init__.py -> build/lib.linux-x86_64-2.7/pyximport
-copying pyximport/pyximport.py -> build/lib.linux-x86_64-2.7/pyximport
-copying pyximport/pyxbuild.py -> build/lib.linux-x86_64-2.7/pyximport
-copying cython.py -> build/lib.linux-x86_64-2.7
-copying Cython/CodeWriter.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/Debugging.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/TestUtils.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/Utils.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/__init__.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/StringIOTree.py -> build/lib.linux-x86_64-2.7/Cython
-copying Cython/Shadow.py -> build/lib.linux-x86_64-2.7/Cython
-creating build/lib.linux-x86_64-2.7/Cython/Build
-copying Cython/Build/Inline.py -> build/lib.linux-x86_64-2.7/Cython/Build
-copying Cython/Build/Dependencies.py -> build/lib.linux-x86_64-2.7/Cython/Build
-copying Cython/Build/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Build
-copying Cython/Compiler/CythonScope.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Options.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/TreePath.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Optimize.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/UtilNodes.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Errors.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/DebugFlags.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/PyrexTypes.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Naming.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Nodes.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/ExprNodes.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Code.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Builtin.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/AnalysedTreeTransforms.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Main.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/ModuleNode.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/StringEncoding.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Annotate.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Parsing.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Interpreter.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Scanning.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Visitor.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/ParseTreeTransforms.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Buffer.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/CodeGeneration.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Version.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Lexicon.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/CmdLine.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/TypeSlots.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Symtab.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Future.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/TypeInference.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/TreeFragment.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/ControlFlow.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/AutoDocTransforms.py -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Runtime/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Runtime
-creating build/lib.linux-x86_64-2.7/Cython/Distutils
-copying Cython/Distutils/build_ext.py -> build/lib.linux-x86_64-2.7/Cython/Distutils
-copying Cython/Distutils/extension.py -> build/lib.linux-x86_64-2.7/Cython/Distutils
-copying Cython/Distutils/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Distutils
-copying Cython/Plex/Machines.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Errors.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Traditional.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Actions.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/DFA.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Scanners.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Timing.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Lexicons.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Transitions.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Regexps.py -> build/lib.linux-x86_64-2.7/Cython/Plex
-creating build/lib.linux-x86_64-2.7/Cython/Tests
-copying Cython/Tests/xmlrunner.py -> build/lib.linux-x86_64-2.7/Cython/Tests
-copying Cython/Tests/TestCodeWriter.py -> build/lib.linux-x86_64-2.7/Cython/Tests
-copying Cython/Tests/TestStringIOTree.py -> build/lib.linux-x86_64-2.7/Cython/Tests
-copying Cython/Tests/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Tests
-creating build/lib.linux-x86_64-2.7/Cython/Build/Tests
-copying Cython/Build/Tests/TestInline.py -> build/lib.linux-x86_64-2.7/Cython/Build/Tests
-copying Cython/Build/Tests/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Build/Tests
-copying Cython/Build/Tests/TestStripLiterals.py -> build/lib.linux-x86_64-2.7/Cython/Build/Tests
-creating build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/TestDecorators.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/TestParseTreeTransforms.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/TestTreeFragment.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/TestTreePath.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-copying Cython/Compiler/Tests/TestBuffer.py -> build/lib.linux-x86_64-2.7/Cython/Compiler/Tests
-creating build/lib.linux-x86_64-2.7/Cython/Debugger
-copying Cython/Debugger/Cygdb.py -> build/lib.linux-x86_64-2.7/Cython/Debugger
-copying Cython/Debugger/libcython.py -> build/lib.linux-x86_64-2.7/Cython/Debugger
-copying Cython/Debugger/libpython.py -> build/lib.linux-x86_64-2.7/Cython/Debugger
-copying Cython/Debugger/DebugWriter.py -> build/lib.linux-x86_64-2.7/Cython/Debugger
-copying Cython/Debugger/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Debugger
-creating build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-copying Cython/Debugger/Tests/TestLibCython.py -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-copying Cython/Debugger/Tests/test_libpython_in_gdb.py -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-copying Cython/Debugger/Tests/test_libcython_in_gdb.py -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-copying Cython/Debugger/Tests/__init__.py -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-creating build/lib.linux-x86_64-2.7/Cython/Includes
-copying Cython/Includes/numpy.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes
-creating build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/stdio.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/locale.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/stdint.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/errno.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/__init__.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/float.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/signal.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/string.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/stddef.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/stdlib.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/limits.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-copying Cython/Includes/libc/math.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libc
-creating build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_sequence.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_weakref.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/stdio.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_float.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_ref.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_pycapsule.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_unicode.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_instance.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_mapping.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_oldbuffer.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_bytes.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_iterator.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/stl.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_getargs.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_complex.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_function.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_cobject.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_type.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_number.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_string.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python2.5.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_object.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_set.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_method.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_int.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/stdlib.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_mem.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_tuple.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_module.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_version.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_bool.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_buffer.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_list.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_long.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_exc.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-copying Cython/Includes/Deprecated/python_dict.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated
-creating build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/sequence.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/number.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/exc.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/mapping.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/version.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/bytes.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/ref.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/object.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/long.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/cobject.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/list.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/pycapsule.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/instance.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/buffer.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/bool.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/type.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/oldbuffer.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/getargs.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/weakref.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/iterator.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/function.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/tuple.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/unicode.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/mem.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/__init__.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/method.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/float.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/string.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/set.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/module.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/complex.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/dict.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/pythread.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-copying Cython/Includes/cpython/int.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/cpython
-creating build/lib.linux-x86_64-2.7/Cython/Includes/posix
-copying Cython/Includes/posix/unistd.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/posix
-copying Cython/Includes/posix/__init__.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/posix
-copying Cython/Includes/posix/fcntl.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/posix
-creating build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/pair.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/stack.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/list.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/map.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/queue.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/vector.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/__init__.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/set.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/utility.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Includes/libcpp/deque.pxd -> build/lib.linux-x86_64-2.7/Cython/Includes/libcpp
-copying Cython/Compiler/ParseTreeTransforms.pxd -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Parsing.pxd -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Code.pxd -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Visitor.pxd -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Compiler/Scanning.pxd -> build/lib.linux-x86_64-2.7/Cython/Compiler
-copying Cython/Runtime/refnanny.pyx -> build/lib.linux-x86_64-2.7/Cython/Runtime
-copying Cython/Plex/Scanners.pxd -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Plex/Actions.pxd -> build/lib.linux-x86_64-2.7/Cython/Plex
-copying Cython/Debugger/Tests/codefile -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-copying Cython/Debugger/Tests/cfuncs.c -> build/lib.linux-x86_64-2.7/Cython/Debugger/Tests
-running build_ext
-running build_scripts
-creating build/scripts-2.7
-copying and adjusting bin/cython -> build/scripts-2.7
-copying and adjusting bin/cygdb -> build/scripts-2.7
-changing mode of build/scripts-2.7/cython from 644 to 755
-changing mode of build/scripts-2.7/cygdb from 644 to 755
-running install_lib
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/CythonScope.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Options.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/TreePath.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Optimize.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/UtilNodes.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Errors.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/DebugFlags.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/PyrexTypes.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Naming.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Visitor.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Nodes.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/ExprNodes.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Code.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Builtin.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/AnalysedTreeTransforms.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/TestDecorators.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/TestParseTreeTransforms.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/TestTreeFragment.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/TestTreePath.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Tests/TestBuffer.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Main.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/ModuleNode.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/StringEncoding.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/ParseTreeTransforms.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Annotate.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Parsing.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Interpreter.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Scanning.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Lexicon.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Parsing.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Visitor.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/ParseTreeTransforms.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Parsing.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Buffer.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/CodeGeneration.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Version.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Scanning.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Lexicon.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Code.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/CmdLine.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Code.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/TypeSlots.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Symtab.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Future.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/TypeInference.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/TreeFragment.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/ControlFlow.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Visitor.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/Scanning.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/Compiler/AutoDocTransforms.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler
-copying build/lib.linux-x86_64-2.7/Cython/CodeWriter.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Cygdb.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/libcython.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/codefile -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/TestLibCython.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/test_libpython_in_gdb.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/test_libcython_in_gdb.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/cfuncs.c -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/Tests/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/libpython.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/DebugWriter.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-copying build/lib.linux-x86_64-2.7/Cython/Debugger/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Machines.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Errors.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Traditional.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Scanners.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Actions.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Scanners.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Actions.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/DFA.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Scanners.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Actions.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Timing.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Lexicons.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Transitions.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Plex/Regexps.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex
-copying build/lib.linux-x86_64-2.7/Cython/Debugging.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Tests/xmlrunner.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Tests/TestCodeWriter.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Tests/TestStringIOTree.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Tests/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/stdio.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/locale.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/stdint.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/errno.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/__init__.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/float.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/signal.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/string.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/stddef.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/stdlib.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/limits.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libc/math.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libc
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_sequence.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_weakref.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/stdio.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_float.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_ref.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_pycapsule.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_unicode.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_instance.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_mapping.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_oldbuffer.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_bytes.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_iterator.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/stl.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_getargs.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_complex.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_function.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_cobject.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_type.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_number.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_string.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python2.5.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_object.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_set.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_method.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_int.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/stdlib.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_mem.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_tuple.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_module.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_version.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_bool.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_buffer.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_list.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_long.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_exc.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-copying build/lib.linux-x86_64-2.7/Cython/Includes/Deprecated/python_dict.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/Deprecated
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/sequence.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/number.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/exc.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/mapping.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/version.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/bytes.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/ref.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/object.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/long.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/cobject.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/list.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/pycapsule.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/instance.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/buffer.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/bool.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/type.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/oldbuffer.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/getargs.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/weakref.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/iterator.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/function.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/tuple.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/unicode.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/mem.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/__init__.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/method.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/float.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/string.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/set.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/module.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/complex.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/dict.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/pythread.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-copying build/lib.linux-x86_64-2.7/Cython/Includes/cpython/int.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/cpython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/posix
-copying build/lib.linux-x86_64-2.7/Cython/Includes/posix/unistd.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/posix
-copying build/lib.linux-x86_64-2.7/Cython/Includes/posix/__init__.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/posix
-copying build/lib.linux-x86_64-2.7/Cython/Includes/posix/fcntl.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/posix
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/pair.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/stack.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/list.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/map.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/queue.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/vector.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/__init__.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/set.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/utility.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/libcpp/deque.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes/libcpp
-copying build/lib.linux-x86_64-2.7/Cython/Includes/numpy.pxd -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Includes
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Runtime
-copying build/lib.linux-x86_64-2.7/Cython/Runtime/refnanny.pyx -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Runtime
-copying build/lib.linux-x86_64-2.7/Cython/Runtime/refnanny.so -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Runtime
-copying build/lib.linux-x86_64-2.7/Cython/Runtime/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Runtime
-copying build/lib.linux-x86_64-2.7/Cython/TestUtils.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils
-copying build/lib.linux-x86_64-2.7/Cython/Distutils/build_ext.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils
-copying build/lib.linux-x86_64-2.7/Cython/Distutils/extension.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils
-copying build/lib.linux-x86_64-2.7/Cython/Distutils/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils
-copying build/lib.linux-x86_64-2.7/Cython/Utils.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-copying build/lib.linux-x86_64-2.7/Cython/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-copying build/lib.linux-x86_64-2.7/Cython/StringIOTree.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-copying build/lib.linux-x86_64-2.7/Cython/Shadow.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build
-copying build/lib.linux-x86_64-2.7/Cython/Build/Inline.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build
-copying build/lib.linux-x86_64-2.7/Cython/Build/Dependencies.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Build/Tests/TestInline.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Build/Tests/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Build/Tests/TestStripLiterals.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests
-copying build/lib.linux-x86_64-2.7/Cython/Build/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build
-creating /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport
-copying build/lib.linux-x86_64-2.7/pyximport/pyximport.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport
-copying build/lib.linux-x86_64-2.7/pyximport/pyxbuild.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport
-copying build/lib.linux-x86_64-2.7/pyximport/__init__.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport
-copying build/lib.linux-x86_64-2.7/cython.py -> /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/CythonScope.py to CythonScope.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Options.py to Options.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/TreePath.py to TreePath.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Optimize.py to Optimize.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/UtilNodes.py to UtilNodes.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Errors.py to Errors.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/DebugFlags.py to DebugFlags.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/PyrexTypes.py to PyrexTypes.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Naming.py to Naming.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Nodes.py to Nodes.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/ExprNodes.py to ExprNodes.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Code.py to Code.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Builtin.py to Builtin.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/AnalysedTreeTransforms.py to AnalysedTreeTransforms.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/TestDecorators.py to TestDecorators.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/TestParseTreeTransforms.py to TestParseTreeTransforms.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/TestTreeFragment.py to TestTreeFragment.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/TestTreePath.py to TestTreePath.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Tests/TestBuffer.py to TestBuffer.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Main.py to Main.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/ModuleNode.py to ModuleNode.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/StringEncoding.py to StringEncoding.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Annotate.py to Annotate.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Parsing.py to Parsing.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Interpreter.py to Interpreter.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Scanning.py to Scanning.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Visitor.py to Visitor.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/ParseTreeTransforms.py to ParseTreeTransforms.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Buffer.py to Buffer.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/CodeGeneration.py to CodeGeneration.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Version.py to Version.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Lexicon.py to Lexicon.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/CmdLine.py to CmdLine.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/TypeSlots.py to TypeSlots.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Symtab.py to Symtab.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/Future.py to Future.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/TypeInference.py to TypeInference.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/TreeFragment.py to TreeFragment.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/ControlFlow.py to ControlFlow.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Compiler/AutoDocTransforms.py to AutoDocTransforms.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/CodeWriter.py to CodeWriter.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Cygdb.py to Cygdb.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/libcython.py to libcython.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests/TestLibCython.py to TestLibCython.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests/test_libpython_in_gdb.py to test_libpython_in_gdb.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests/test_libcython_in_gdb.py to test_libcython_in_gdb.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/Tests/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/libpython.py to libpython.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/DebugWriter.py to DebugWriter.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugger/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Machines.py to Machines.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Errors.py to Errors.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Traditional.py to Traditional.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Actions.py to Actions.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/DFA.py to DFA.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Scanners.py to Scanners.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Timing.py to Timing.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Lexicons.py to Lexicons.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Transitions.py to Transitions.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Plex/Regexps.py to Regexps.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Debugging.py to Debugging.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests/xmlrunner.py to xmlrunner.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests/TestCodeWriter.py to TestCodeWriter.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests/TestStringIOTree.py to TestStringIOTree.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Tests/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Runtime/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/TestUtils.py to TestUtils.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils/build_ext.py to build_ext.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils/extension.py to extension.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Distutils/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Utils.py to Utils.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/StringIOTree.py to StringIOTree.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Shadow.py to Shadow.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Inline.py to Inline.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Dependencies.py to Dependencies.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests/TestInline.py to TestInline.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/Tests/TestStripLiterals.py to TestStripLiterals.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython/Build/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport/pyximport.py to pyximport.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport/pyxbuild.py to pyxbuild.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/pyximport/__init__.py to __init__.pyc
-byte-compiling /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/cython.py to cython.pyc
-running install_scripts
-copying build/scripts-2.7/cython -> /user/ninastei/CCR/plc-2.0/bin
-copying build/scripts-2.7/cygdb -> /user/ninastei/CCR/plc-2.0/bin
-changing mode of /user/ninastei/CCR/plc-2.0/bin/cython to 755
-changing mode of /user/ninastei/CCR/plc-2.0/bin/cygdb to 755
-running install_egg_info
-Writing /user/ninastei/CCR/plc-2.0/lib/python2.7/site-packages/Cython-0.14.1-py2.7.egg-info
-
-err: Cython/Compiler/Parsing.c: In function ‘__pyx_f_6Cython_8Compiler_7Parsing_p_call_parse_args’:
-Cython/Compiler/Parsing.c:7785:7: warning: variable ‘__pyx_v_allow_genexp’ set but not used [-Wunused-but-set-variable]
-   int __pyx_v_allow_genexp = ((int)1);
-       ^
-Cython/Compiler/Parsing.c: In function ‘__pyx_f_6Cython_8Compiler_7Parsing_p_positional_and_keyword_args’:
-Cython/Compiler/Parsing.c:30472:7: warning: variable ‘__pyx_v_was_keyword’ set but not used [-Wunused-but-set-variable]
-   int __pyx_v_was_keyword;
-       ^
-Cython/Compiler/Visitor.c: In function ‘__pyx_pf_6Cython_8Compiler_7Visitor_11TreeVisitor_1dump_node’:
-Cython/Compiler/Visitor.c:1189:13: warning: variable ‘__pyx_v_indent’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_indent = 0;
-             ^
-Cython/Compiler/Visitor.c: In function ‘__pyx_pf_6Cython_8Compiler_7Visitor_9PrintTree_5repr_of’:
-Cython/Compiler/Visitor.c:7467:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11GlobalState_15new_string_const_cname’:
-Cython/Compiler/Code.c:12309:13: warning: variable ‘__pyx_v_intern’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_intern = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11GlobalState_16new_int_const_cname’:
-Cython/Compiler/Code.c:12580:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11CCodeWriter_37get_py_version_hex’:
-Cython/Compiler/Code.c:20448:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11CCodeWriter_45unlikely’:
-Cython/Compiler/Code.c:22273:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11CCodeWriter_46entry_as_pyobject’:
-Cython/Compiler/Code.c:22389:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-Cython/Compiler/Code.c: In function ‘__pyx_pf_6Cython_8Compiler_4Code_11CCodeWriter_47as_pyobject’:
-Cython/Compiler/Code.c:22567:13: warning: variable ‘__pyx_v_self’ set but not used [-Wunused-but-set-variable]
-   PyObject *__pyx_v_self = 0;
-             ^
-
-------------------------------------------------------------------
-Checking python module 'cython'
 ok
 ------------------------------------------------------------------
 Checking python module 'cython'
 ok
 ------------------------------------------------------------------
 Checking cython version (>0.12)
-0.14.1
+0.28.5
 ------------------------------------------------------------------
 Checking for program 'cython'
 /user/ninastei/CCR/plc-2.0/bin/cython
-find program=['cython'] paths=['/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='CYTHON' -> ['/user/ninastei/CCR/plc-2.0/bin/cython']
+find program=['cython'] paths=['/user/ninastei/CCR/plc-2.0/bin', '/usr/lib64/qt-3.3/bin', '/usr/local/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/usr/lpp/mmfs/bin', '/opt/dell/srvadmin/bin', '/user/ninastei/bin', '/user/ninastei/Mybin', '/user/ninastei/CCR/Mybin/hpc1', '/user/ninastei/bin'] var='CYTHON' -> ['/user/ninastei/CCR/plc-2.0/bin/cython']
 ------------------------------------------------------------------
 Add plugin : 'rel2015'
 ok
