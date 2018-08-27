@@ -597,7 +597,7 @@ def configure_cython(ctx):
     f.close()
     os.chmod(osp.join(ctx.env.BINDIR,"cython"),Utils.O755)
 
-  atl.configure_python_module(ctx,"cython","https://files.pythonhosted.org/packages/21/89/ca320e5b45d381ae0df74c4b5694f1471c1b2453c5eb4bac3449f5970481/Cython-0.28.5.tar.gz","Cython-0.28.5.tar.gz","Cython-0.28.5",postinstall=postinstallcython)
+  atl.configure_python_module(ctx,"cython","https://files.pythonhosted.org/packages/1d/01/9655ca6f4f069e6fa30a58e56b631de18036fd878cc42c3ec3eaaf3c9072/Cython-0.14.1.tar.gz","Cython-0.14.1.tar.gz","Cython-0.14.1",postinstall=postinstallcython)
 
   try:
     # check for cython
