@@ -1,0 +1,28 @@
+#! /usr/bin/env python
+# don't do much for now
+from optparse import OptionParser
+parser = OptionParser()
+
+parser.add_option("--cflags", action="store_true",
+                  help="only the cflags")
+parser.add_option("--libs", action="store_true",
+                  help="only libflags")
+
+(options, args) = parser.parse_args()
+
+
+res={}
+cflags = "-I/user/ninastei/CCR/plc-2.0/include -DPYTHONDIR=\"/usr/lib/python2.7/site-packages\" -DPYTHONARCHDIR=\"/usr/lib64/python2.7/site-packages\" -DHAVE_PYEMBED=1 -DHAVE_PYTHON_H=1 -DHAS_LAPACK -DLAPACK_CLIK -m64"
+libs = "-Wl,-Bdynamic-Wl,-rpath,/user/ninastei/CCR/plc-2.0/lib -Wl,-rpath,/user/ninastei/CCR/plc-2.0 -L/user/ninastei/CCR/plc-2.0/lib -L/user/ninastei/CCR/plc-2.0 -llapack -lblas -ldl -lcfitsio -lgfortran -lgomp -lclik"
+
+if (not options.libs) and (not options.cflags):
+  options.libs=True
+  options.cflags=True
+
+if options.cflags:
+  print cflags,
+if options.libs:
+  print libs,
+print
+
+
