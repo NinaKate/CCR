@@ -1,0 +1,342 @@
+# project  configured on Mon Aug 27 09:23:05 2018 by
+# waf 1.8.8 (abi 98, python 2070cf0 on linux2)
+# using ./waf configure --install_all_deps --lapack_install
+#
+----------------------------------------
+Setting top to
+/home/nina/Code/Research/plc-2.0
+----------------------------------------
+Setting out to
+/home/nina/Code/Research/plc-2.0/build
+----------------------------------------
+Checking for program 'gcc, cc'
+/usr/bin/gcc
+find program=['gcc', 'cc'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
+----------------------------------------
+Checking for program 'ar'
+/usr/bin/ar
+find program=['ar'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+----------------------------------------
+Check gcc version
+5.4.0
+----------------------------------------
+Compile a test code with gcc
+==>
+#include <stdio.h>
+main() {fprintf(stderr,"hello world");}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_cfaceab4dec671d45917f7a5ee227c06/test.c[0m
+
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_cfaceab4dec671d45917f7a5ee227c06/testbuild/test.c.1.o']
+err: ../test.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main() {fprintf(stderr,"hello world");}
+ ^
+
+[2/2] Linking [33mbuild/.conf_check_cfaceab4dec671d45917f7a5ee227c06/testbuild/testprog[0m
+
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_cfaceab4dec671d45917f7a5ee227c06/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Setting architecture flag to
+-m64
+-----------------------------------------
+Checking for $CC option to support OpenMP
+==>
+
+#ifndef _OPENMP
+ choke me
+#endif
+#include <omp.h>
+int main () { return omp_get_num_threads (); }
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_b363d2ab7ee0dcfad10b424e734e0e66/test.c[0m
+
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_b363d2ab7ee0dcfad10b424e734e0e66/testbuild/test.c.1.o']
+err: ../test.c:3:2: error: unknown type name ‘choke’
+  choke me
+  ^
+In file included from ../test.c:5:0:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/omp.h:35:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘typedef’
+ typedef struct
+ ^
+
+from /home/nina/Code/Research/plc-2.0: Test does not build: Traceback (most recent call last):
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Configure.py", line 335, in run_build
+    bld.compile()
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139677719208592: c test.c -> test.c.1.o}
+['/usr/bin/gcc', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_b363d2ab7ee0dcfad10b424e734e0e66/testbuild/test.c.1.o']
+
+==>
+
+#ifndef _OPENMP
+ choke me
+#endif
+#include <omp.h>
+int main () { return omp_get_num_threads (); }
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_9c4464a6fbf84f75a82782ea63ba8f3e/test.c[0m
+
+['/usr/bin/gcc', '-fopenmp', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_9c4464a6fbf84f75a82782ea63ba8f3e/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_9c4464a6fbf84f75a82782ea63ba8f3e/testbuild/testprog[0m
+
+['/usr/bin/gcc', '-m64', '-fopenmp', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_9c4464a6fbf84f75a82782ea63ba8f3e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+-fopenmp
+-----------------------------------------
+Checking for program 'ifort'
+not found
+find program=['ifort'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='FC' -> None
+from /home/nina/Code/Research/plc-2.0: Could not find the program ['ifort']
+-----------------------------------------
+Checking for program 'gfortran, g77'
+/usr/bin/gfortran
+find program=['gfortran', 'g77'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='FC' -> ['/usr/bin/gfortran']
+(tool ar is already loaded, skipping)
+-----------------------------------------
+Check gfortran version
+not found, let's hope for the best...
+-----------------------------------------
+Compile a test code with gfortran
+==>
+program test
+  WRITE(*,*) 'hello world'
+ end program test
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c9f93c6b9980943f4c00a2029b6e7b96/test.f90[0m
+
+['/usr/bin/gfortran', '-DGFORTRAN', '-ffixed-line-length-0', '-ffree-line-length-0', '-m64', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_c9f93c6b9980943f4c00a2029b6e7b96/testbuild/test.f90.1.o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_c9f93c6b9980943f4c00a2029b6e7b96/test.f90']
+[2/2] Linking [33mbuild/.conf_check_c9f93c6b9980943f4c00a2029b6e7b96/testbuild/testprog[0m
+
+['/usr/bin/gfortran', '-m64', 'test.f90.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_c9f93c6b9980943f4c00a2029b6e7b96/testbuild/testprog', '-m64']
+yes
+-----------------------------------------
+retrieve gfortran link line
+ok
+-----------------------------------------
+fortran link line
+-L/home/nina/Code/Research/plc-2.0 -lgfortran -lgomp
+-----------------------------------------
+Setting install root to
+/home/nina/Code/Research/plc-2.0
+-----------------------------------------
+Setting install bin directory to
+/home/nina/Code/Research/plc-2.0/bin
+-----------------------------------------
+Setting install lib directory to
+/home/nina/Code/Research/plc-2.0/lib
+-----------------------------------------
+Setting install include directory to
+/home/nina/Code/Research/plc-2.0/include
+-----------------------------------------
+Checking for program 'python'
+/usr/bin/python
+find program=['python'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python']
+['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
+err: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'get_tag'
+
+['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+12
+final
+0
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0) or ''))"]
+out: '/usr/lib/python2.7/dist-packages'
+
+'/usr/lib/python2.7/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0) or ''))"]
+out: '/usr/lib/python2.7/dist-packages'
+
+'/usr/lib/python2.7/dist-packages'
+
+-----------------------------------------
+Checking for python version
+2.7.12
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/home/nina/Code/Research/plc-2.0') or ''))"]
+out: '/home/nina/Code/Research/plc-2.0/lib/python2.7/site-packages'
+
+'/home/nina/Code/Research/plc-2.0/lib/python2.7/site-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+'/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+Configuration returned from ['/usr/bin/python']:
+prefix = '/usr'
+SO = '.so'
+LDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'
+LIBDIR = '/usr/lib'
+LIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'
+INCLUDEPY = '/usr/include/python2.7'
+Py_ENABLE_SHARED = 1
+MACOSX_DEPLOYMENT_TARGET = ''
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+LDVERSION = ''
+
+-----------------------------------------
+python-config
+/usr/bin/python-config
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/nina/bin', '/home/nina/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
+------------------------------------------------------------------
+Asking python-config for pyembed '--cflags --libs --ldflags' flags
+['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+-lpython2.7 -lpthread -ldl  -lutil -lm 
+-L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+
+yes
+------------------------------------------------------------------
+Getting pyembed flags from python-config
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_fbc58d143d81efc935444f5b9c694145/test.c[0m
+
+['/usr/bin/gcc', '-fno-strict-aliasing', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_fbc58d143d81efc935444f5b9c694145/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_fbc58d143d81efc935444f5b9c694145/testbuild/testprog[0m
+
+['/usr/bin/gcc', '-m64', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_fbc58d143d81efc935444f5b9c694145/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lm', '-ldl', '-lutil', '-lpthread', '-lpython2.7']
+yes
+------------------------------------------------------------------
+Checking for library dl
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_dd8a067c04bb492959d70b123c339745/test.c[0m
+
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_dd8a067c04bb492959d70b123c339745/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_dd8a067c04bb492959d70b123c339745/testbuild/testprog[0m
+
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_dd8a067c04bb492959d70b123c339745/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-ldl']
+yes
+------------------------------------------------------------------
+checking for RTLD_DEFAULT in dl
+==>
+#include <dlfcn.h> 
+int main() {void* tt = RTLD_DEFAULT;}
+<==
+[1/2] Compiling [32mbuild/.conf_check_b8b134f3f11c1d40b253b2c191848453/test.c[0m
+
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_b8b134f3f11c1d40b253b2c191848453/testbuild/test.c.1.o']
+err: ../test.c: In function ‘main’:
+../test.c:2:24: error: ‘RTLD_DEFAULT’ undeclared (first use in this function)
+ int main() {void* tt = RTLD_DEFAULT;}
+                        ^
+../test.c:2:24: note: each undeclared identifier is reported only once for each function it appears in
+
+from /home/nina/Code/Research/plc-2.0: Test does not build: Traceback (most recent call last):
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Configure.py", line 335, in run_build
+    bld.compile()
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139677719084560: c test.c -> test.c.1.o}
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_RTLD_DEFAULT', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_b8b134f3f11c1d40b253b2c191848453/testbuild/test.c.1.o']
+
+no
+from /home/nina/Code/Research/plc-2.0: The configuration failed
+------------------------------------------------------------------
+Checking for program 'pmc-config'
+not found
+find program=['pmc-config'] paths=['/bin'] var='PMC_CONFIG' -> None
+from /home/nina/Code/Research/plc-2.0: Could not find the program ['pmc-config']
+------------------------------------------------------------------
+Checking for library pmc
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_90bbcdd546f4301041820de4c3d0ee30/test.c[0m
+
+['/usr/bin/gcc', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYTHON_H=1', '-DHAS_PMC', '../test.c', '-c', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_90bbcdd546f4301041820de4c3d0ee30/testbuild/test.c.1.o']
+[2/2] Linking [33mbuild/.conf_check_90bbcdd546f4301041820de4c3d0ee30/testbuild/testprog[0m
+
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_90bbcdd546f4301041820de4c3d0ee30/testbuild/testprog', '-Wl,-rpath,/home/nina/Code/Research/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
+err: /usr/bin/ld: cannot find -lpmc
+collect2: error: ld returned 1 exit status
+
+from /home/nina/Code/Research/plc-2.0: Test does not build: Traceback (most recent call last):
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Configure.py", line 335, in run_build
+    bld.compile()
+  File "/home/nina/Code/Research/plc-2.0/.waf-1.8.8-eab538dea2e33915d3770ff3f393b18b/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139677719106768: cprogram test.c.1.o -> testprog}
+['/usr/bin/gcc', '-m64', 'test.c.1.o', '-o', '/home/nina/Code/Research/plc-2.0/build/.conf_check_90bbcdd546f4301041820de4c3d0ee30/testbuild/testprog', '-Wl,-rpath,/home/nina/Code/Research/plc-2.0/lib', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpmc']
+
+not found
+from /home/nina/Code/Research/plc-2.0: The configuration failed
+cd build//;tar -zxf lapack-3.3.1.tgz
+cd build/lapack-3.3.1; make blaslib
+out: ( cd BLAS/SRC; make )
+make[1]: Entering directory '/home/nina/Code/Research/plc-2.0/build/lapack-3.3.1/BLAS/SRC'
+['/usr/bin/gfortran'] -DGFORTRAN -ffixed-line-length-0 -ffree-line-length-0 -m64 -fPIC -shared  -c isamax.f -o isamax.o
+Makefile:171: recipe for target 'isamax.o' failed
+make[1]: Leaving directory '/home/nina/Code/Research/plc-2.0/build/lapack-3.3.1/BLAS/SRC'
+Makefile:21: recipe for target 'blaslib' failed
+
+err: /bin/sh: 1: [/usr/bin/gfortran]: not found
+make[1]: *** [isamax.o] Error 127
+make: *** [blaslib] Error 2
+
