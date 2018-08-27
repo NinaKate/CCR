@@ -576,7 +576,7 @@ def configure_numpy(ctx):
 
 def configure_pyfits(ctx):
   import autoinstall_lib as atl
-  atl.configure_python_module(ctx,"pyfits","http://pypi.python.org/packages/source/p/pyfits/pyfits-3.2.2.tar.gz","pyfits-3.2.2.tar.gz","pyfits-3.2.2")
+  atl.configure_python_module(ctx,"pyfits","https://files.pythonhosted.org/packages/c0/5d/ffae283cea526bce7c1154e7309a040a3e8c02e973b2360bcfc8f30134ef/pyfits-3.5.tar.gz","pyfits-3.5.tar.gz","pyfits-3.5")
   
 def configure_cython(ctx):
   import autoinstall_lib as atl
